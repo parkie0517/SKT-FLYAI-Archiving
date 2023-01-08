@@ -123,7 +123,7 @@
 
 - output에 non linear한 성질을 추가하기 위함
 - Sigmoid function
-    $Sigmoid(x) = \frac{1}{1+e^{-x}}
+    $Sigmoid(x) = \frac{1}{1+e^{-x}}$
 
 **Loss**
 
@@ -131,7 +131,7 @@
     - MSE의 loss 변화가 심한 단점 보완
     - 로그를 사용하기에 불일치율 높을수록 높은 loss 반환
 
-$BCE = - \frac{1}{n} \sum_{i=1}^{n} ( Y_{i} \cdot log (\hat{Y_{i}}) + (1 - Y_{i}) \cdot log (1 - \hat{Y_{i}}))
+$BCE = - \frac{1}{n} \sum_{i=1}^{n} ( Y_{i} \cdot log (\hat{Y_{i}}) + (1 - Y_{i}) \cdot log (1 - \hat{Y_{i}}))$
 
 정규화
 
@@ -179,4 +179,4 @@ Loss
     - 원핫 벡터일 때
 - sparse categorical cross entropy loss
     - 정수일 때
-- $CE = -\sum_{c=1}^{C}L_{c}logP_{c}
+- $CE = -\sum_{c=1}^{C}L_{c}logP_{c}$
