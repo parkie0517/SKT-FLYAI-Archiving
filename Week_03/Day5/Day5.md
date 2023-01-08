@@ -43,5 +43,12 @@
 
 ![image](https://user-images.githubusercontent.com/80855939/210905602-49370b9e-a812-4472-9839-51a520747072.png)
 
+- 데이터셋 확인
+
+  ![dataset](https://wikidocs.net/images/page/22894/%ED%9B%88%EB%A0%A8%EB%8D%B0%EC%9D%B4%ED%84%B0.PNG)
+
+  - v1 : 스팸인지 아닌지를 나타내는 레이블
+  - v2 : 메일의 본문
+
 ### RNN vs CNN vs MLP vs SVM
 <img src="https://user-images.githubusercontent.com/80855939/210919740-4500641f-94ce-4112-b1a8-2eb6c2987688.png" width=70% height=70%>
