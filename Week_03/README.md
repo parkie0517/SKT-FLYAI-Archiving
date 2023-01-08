@@ -18,7 +18,22 @@
   - [펭귄 분류](./Day1/Day1_classification.ipynb)
   - [Fashion MNIST](./Day1/Day1_Fashion_MNIST.ipynb)
 
-### [Day 2]
+### [[Day 2]](./Day2/Day2.md)
+이미지 데이터 관련
+  -  합성곱 계산
+  -  합성곱 신경망 구조
+     - Convolution
+     - ReLU
+     - Pooling
+    -  딥러닝 이미지 분류 과정
+       - Grayscale 이미지 분류 [Fashion-MNIST](./Day2/1_3_CNN_이미지_데이터의_다중분류.ipynb)
+       - Color 이미지 분류 [CIFAR-10](./Day2/1_3_CNN_컬러이미지_분류.ipynb), 
+       - [다중분류](./Day2/1_3_DNN_이미지_데이터의_다중_분류.ipynb)
+    -  과적합 방지 기술
+
+테이블 데이터 관련 [펭귄데이터 다중분류](./Day2/1_3_펭귄데이터_다중분류.ipynb)
+
+RNN 간단 실습 [영화 긍정/부정 리뷰](./Day2/1_3_영화리뷰ML2_ipynb의_사본.ipynb)
 
 ### [Day 3]
 
