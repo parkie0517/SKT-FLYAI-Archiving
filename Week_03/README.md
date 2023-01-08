@@ -37,7 +37,16 @@ RNN 간단 실습 [영화 긍정/부정 리뷰](./Day2/1_3_영화리뷰ML2_ipynb
 
 ### [Day 3]
 
-### [Day 4]
+### [[Day 4]](./Day4/Day4.ipynb)
+- 전이학습
+  - 전이학습 사용 이유
+  - 전이학습의 사전 학습과 미세 조정
+  - 전이학습 이외에 모델 성능 개선 방법
+- 바운딩 박스(Bounding box)
+  - CV Task
+  - 라벨링 도구
+- 객체 탐지(Object Detection)
+  - YOLOv5
 
 ### [[Day 5]](./Day5/Day5.md)
 - RNN
