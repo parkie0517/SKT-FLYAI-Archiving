@@ -27,6 +27,6 @@
 | :---: | :--- | :--- | :---: |
 | 1/2 |  |  | 구미진<br>장준영 | 
 | 1/3 |  |  | 김지성<br>박세현 |
-| 1/4 |  |  | 이예진 |
+| 1/4 | Multi Classification | `CNN` `Data Augmentation` | 이예진 | 
 | 1/5 | Object Detection | `CNN` `YOLOv5` | 김태형<br>강두원 |
 | 1/6 |  |  | 이은비<br>강정훈 |
