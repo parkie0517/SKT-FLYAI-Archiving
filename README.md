@@ -19,14 +19,23 @@
 | 12/26 | 워크샵 day1 | 아이데이션 및 팀빌딩 |
 | 12/27 | 워크샵 day2 | 팀 프로젝트 |
 | 12/28 | 워크샵 day3 | 인공지능 개요 |  |  |
-| 12/29 |  |  |
-| 12/30 |  |  |
+| 12/29 | Machine Learning | `Classification` |
+| 12/30 | Machine Learning | `Regression` `Cross Validation` |
 
 ### Week 03
 | 날짜 | 주제                   | 학습 내용                     | 발표자 |
 | :---: |:---------------------|:--------------------------| :---: |
-| 1/2 |                      |                           | 구미진<br>장준영 | 
-| 1/3 | CNN이란?               | `CNN`                      | 김지성<br>박세현 |
+| 1/2 | DNN | `DNN` `Linear Regression` `Binary Classification` `Multiple Classification` | 구미진<br>장준영 | 
+| 1/3 | CNN이란? | `CNN` | 김지성<br>박세현 |
 | 1/4 | Multi Classification | `CNN` `Data Augmentation` | 이예진 | 
 | 1/5 | Object Detection     | `CNN` `YOLOv5`            | 김태형<br>강두원 |
 | 1/6 |                      |                           | 이은비<br>강정훈 |
+
+### Week 04
+| 날짜 | 주제                   | 학습 내용                     | 발표자 |
+| :---: |:---------------------|:--------------------------| :---: |
+| 1/9 |  |  |  | 
+| 1/10 |  |  |  | 
+| 1/11 |  |  |  | 
+| 1/12 |  |  |  | 
+| 1/13 |  |  |  | 
