@@ -51,5 +51,5 @@ Reinforcement Learning
 
 - 실습1 : [특정한 구역값 프린트](./Day5/day5_4.py)
 - 실습2 : [최적화된 이진화 사진 처리](./Day5/day5_5_find_my_binarization_method.ipynb)
-- 오후 실습1 : [색상 공 찾기](./Day5/색상 공 찾기.py)
+- 오후 실습1 : [색상 공 찾기](./Day5/색상공찾기.py)
 - 오후 실습2 : [자동 화변 밝기 조절](./Day5/영상밝기조절.py)
