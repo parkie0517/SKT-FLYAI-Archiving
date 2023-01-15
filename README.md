@@ -26,16 +26,16 @@
 | 날짜 | 주제 | 학습 내용 | 발표자 |
 | :---: | :--- | :--- | :---: |
 | 1/2 | DNN | `DNN` `Linear Regression` <br> `Binary Classification` `Multiple Classification` | 구미진<br>장준영 | 
-| 1/3 | CNN이란? | `CNN` | 김지성<br>박세현 |
+| 1/3 | CNN | `CNN` | 김지성<br>박세현 |
 | 1/4 | Multi Classification | `CNN` `Data Augmentation` | 이예진 | 
-| 1/5 | Object Detection     | `CNN` `YOLOv5`            | 김태형<br>강두원 |
-| 1/6 |                      |                           | 이은비<br>강정훈 |
+| 1/5 | Object Detection | `CNN` `YOLOv5`            | 김태형<br>강두원 |
+| 1/6 | RNN | `RNN` | 이은비<br>강정훈 |
 
 ### Week 04
 | 날짜 | 주제 | 학습 내용 | 발표자 |
 | :---: | :--- | :--- | :---: |
-| 1/9 |  |  | 장준영<br>김지성 | 
-| 1/10 | DNN, 딥러닝 종류 | `DNN`,`CNN` | 구미진<br>김태형 | 
-| 1/11 | 디지털 영상처리(OpenCV) | `ImageProcessing` `OpenCV` | 강두원<br>이예진 | 
-| 1/12 |  |  | 한원배<br>이은비 | 
-| 1/13 |  |  | 박세현<br>강정훈 | 
+| 1/9 | DNN 개요 | `DNN` ` | 장준영<br>김지성 | 
+| 1/10 | DNN, 딥러닝 종류 | `DNN` `CNN` | 구미진<br>김태형 | 
+| 1/11 | 디지털 영상처리(OpenCV) | `OpenCV` `ImageProcessing` | 강두원<br>이예진 | 
+| 1/12 | 디지털 영상처리(OpenCV) | `OpenCV` `영상파일 처리` | 한원배<br>이은비 | 
+| 1/13 | 디지털 영상처리(OpenCV) | `OpenCV` `이미지 채널 처리` | 박세현<br>강정훈 | 
