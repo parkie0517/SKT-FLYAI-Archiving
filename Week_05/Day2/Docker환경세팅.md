@@ -21,6 +21,10 @@ https://learn.microsoft.com/ko-kr/virtualization/hyper-v-on-windows/quick-start/
 
 https://hub.docker.com/ 접속후 허브 도커 회원가입 및 설치
 
+## 3. 관리자 권한으로 powershell 실행
+![image](https://user-images.githubusercontent.com/80855939/212865514-e6f9416d-b9c1-4e92-b305-9aab4558836a.png)
+
+
 ## 3-1. <p>Linux용 'Windows 하위 시스템' 옵션 기능을 사용:</p>
 
 <pre><code> dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart  
@@ -34,6 +38,7 @@ https://hub.docker.com/ 접속후 허브 도커 회원가입 및 설치
 ## 3-3. 
 x64 머신용 최신 WSL2 Linux 커널 업데이트 패키지 다운로드 및 설치 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
+*그외 오류 https://goddaehee.tistory.com/313#google_vignette 참고
 ## 4 설치 완료 
 
 ### 정상설치 된 경우
@@ -44,6 +49,3 @@ x64 머신용 최신 WSL2 Linux 커널 업데이트 패키지 다운로드 및 �
 ![image](https://user-images.githubusercontent.com/80855939/212858062-7b0664b3-9dc4-4c9c-9ac6-8ae4f9501697.png)
 
 
-2. 기존 테이블에 passwd 필트 추
-
-## @@@@@@@@@@@@@@@작성중@@@@@@@@@@@
