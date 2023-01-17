@@ -14,7 +14,7 @@ update mem set userpw = '1234';
 ```
 
 
-> 보안을 위해 DB 비밀번호 데이터 암호화
+## 보안을 위해 DB 비밀번호 데이터 암호화
 ```SQL
 update mem set userpw=SHA2('1234', 256);
 ```
