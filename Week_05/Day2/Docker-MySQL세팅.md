@@ -1,17 +1,16 @@
-# 1. 도커 설치후 MySQL 세팅
+# 도커 설치후 MySQL 세팅
 
-  1. MySQL Docker 이미지 다운로드
+## 1. MySQL Docker 이미지 다운로드
 ```SQL
 docker pull mysql
 ```
 
-
- 2. MySQL Docker 컨테이너 생성 및 실행
+## 2. MySQL Docker 컨테이너 생성 및 실행
 ```SQL
 docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=<password> -d -p 3306:3306 mysql:latest
 ```
 
- 3. MySQL Docker 컨테이너 접속
+## 3. MySQL Docker 컨테이너 접속
 ```SQL
 docker exec -e LC_ALL=C.UTF-8 -it "본인 Key값" ad bash
 mysql -u root -p
