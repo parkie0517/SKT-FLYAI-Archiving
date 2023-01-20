@@ -60,6 +60,20 @@
 
 # Microsoft azure
 
+### 실습 : 가상머신 만들기
+![image](https://user-images.githubusercontent.com/67251510/213591063-cdc2c7b5-cfc4-40cc-8b17-d3ae8990cbce.png)
+* 기본사항
+    - 가상머신 이름, 관리자 계정 설정, 인스턴스 설정 등을 할 수 있다.
+* 디스크
+    - 가상머신의 디스크 크기 등을 설정할 수 있다.
+* 네트워킹
+    - 인바운드 포트, 가상 네트워크 연결 등을 할 수 있다.
+* 관리
+* Monitoring
+* 고급
+* 태그
+
+
 ## Load Balancer
 
 ![image](https://user-images.githubusercontent.com/67251510/213511642-fdca1539-6893-4339-bc6f-98a0ca5cef25.png)
