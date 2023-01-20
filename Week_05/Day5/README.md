@@ -52,6 +52,6 @@ ex) 첨부파일을 다운로드 할 때
 
 
 
-|![](https://user-images.githubusercontent.com/28096454/213606377-7711e936-a3fc-4c6b-9253-0db2620f6e6d.png)|
+|![](https://user-images.githubusercontent.com/28096454/213606727-fe3f2948-0d5a-4bb3-a807-186a241ed079.png)|
 |:---:|
-|*인바운드와 아웃바운드*|
+|*VPC 실습 구성도*|
