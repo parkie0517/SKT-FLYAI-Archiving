@@ -49,3 +49,9 @@ ex) 첨부파일을 다운로드 할 때
 |![](https://user-images.githubusercontent.com/28096454/213602687-1450e047-0785-41f1-ae7c-e2c25f6cae8d.png)|
 |:---:|
 |*인바운드와 아웃바운드*|
+
+
+
+|![](https://user-images.githubusercontent.com/28096454/213606377-7711e936-a3fc-4c6b-9253-0db2620f6e6d.png)|
+|:---:|
+|*인바운드와 아웃바운드*|
