@@ -66,3 +66,22 @@ nsg 인스턴스는 네트워크 인터페이스와 1대1 mapping
 ## Application Security Group
 nsg에 추가적으로 보안 설정을 추가할 수 있는 instance
 
+
+<br>
+
+# Wordpress
+
+## 웹앱 만들기
+지속적으로 앱 배포하려면 Github Actions 활성화해서 할 수 있음
+
+## PaaS
+- PaaS 기능은 VM 한단계 위에서 세팅된다고 생각하면 됨
+- 만들어둔 가상 네트워크에 public한 PaaS를 연결할 수 있음
+- Private한 환경으로도 연결 가능
+
+<br>
+
+# 직접 만든 Flask 프로젝트 VM에 배포해보기
+Document 참고하여 진행 
+
+https://learn.microsoft.com/ko-kr/azure/app-service/quickstart-python?tabs=flask%2Cwindows%2Cazure-cli%2Cvscode-deploy%2Cdeploy-instructions-azportal%2Cterminal-bash%2Cdeploy-instructions-zip-azcli
