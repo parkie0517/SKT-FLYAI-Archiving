@@ -32,6 +32,11 @@ New-NetFirewallRule –DisplayName "Allow ICMPv4-In" –Protocol ICMPv4
 
 # 보안 그룹
 
+### Window image vm 웹서버 실행
+~~~
+Install-WindowsFeature -name Web-Server -IncludeManagementTools
+~~~
+
 ## 인바운드 & 아웃바운드
 인바운드(inbound)와 아웃바운드(outbound)
 인바운드와 아웃바운드는 트래픽에 네트워크 간에 이동하는 방향을 말한다.
@@ -49,7 +54,6 @@ ex) 첨부파일을 다운로드 할 때
 |![](https://user-images.githubusercontent.com/28096454/213602687-1450e047-0785-41f1-ae7c-e2c25f6cae8d.png)|
 |:---:|
 |*인바운드와 아웃바운드*|
-
 
 
 |![](https://user-images.githubusercontent.com/28096454/213606727-fe3f2948-0d5a-4bb3-a807-186a241ed079.png)|
