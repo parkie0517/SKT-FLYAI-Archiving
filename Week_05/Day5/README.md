@@ -30,7 +30,7 @@ New-NetFirewallRule –DisplayName "Allow ICMPv4-In" –Protocol ICMPv4
 ## VPC 피어링
 서로 다른 Vnet끼리 연결하는 것
 
-# 보안 그룹
+# 보안 그룹 (Network Security Group)
 
 ### Window image vm 웹서버 실행
 ~~~
@@ -59,3 +59,10 @@ ex) 첨부파일을 다운로드 할 때
 |![](https://user-images.githubusercontent.com/28096454/213606727-fe3f2948-0d5a-4bb3-a807-186a241ed079.png)|
 |:---:|
 |*VPC 실습 구성도*|
+
+## NSG instance
+nsg 인스턴스는 네트워크 인터페이스와 1대1 mapping
+
+## Application Security Group
+nsg에 추가적으로 보안 설정을 추가할 수 있는 instance
+
