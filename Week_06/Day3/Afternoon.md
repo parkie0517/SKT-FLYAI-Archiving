@@ -2,6 +2,13 @@
 
 ---
 
+### 시스템 구성도
+
+![structure](https://user-images.githubusercontent.com/4527194/214746442-537ce313-c6c8-4d28-b90d-671394590830.png)
+
+
+<br>
+
 1. Virtual Network 만들기
 
     1. rg53-after-exec-virtual-network 이름으로
@@ -30,13 +37,19 @@
 
 4. 가상머신 생성
 
+- 네트워크 보안그룹은 VM1, VM2 동일하게 한다.
+
 | VM2 리소스 생성 | VM2 네트워킹 생성 |
 |----------|-----------|
 |![image](https://user-images.githubusercontent.com/4527194/214747302-e6feea71-3005-4dcf-ad29-8f3bb652c45d.png)|![image](https://user-images.githubusercontent.com/4527194/214747337-c9ccb8ac-5e37-4eb3-9da8-be11864dc87c.png)|
 
 
+   
+로드밸런서 설정에서 2개가 설정되어 있는 것을 확인 할 수 있다.
+![load_balancer_state](https://user-images.githubusercontent.com/4527194/214746238-5a8ab937-6c15-439b-a7ed-346030b1a960.png)
 
-6. Bastion 생성
+
+5. Bastion 생성
 
 
 | 베스천으로 VM1에 접속하기 | 베스천으로 VM2에 접속하기 |
@@ -49,7 +62,12 @@ Bastion 접속 중인 세션 확인 해보기
 
  ![Bastion 접속 세션](https://user-images.githubusercontent.com/4527194/214747251-980da3ef-3067-41ae-8fad-e2af3f4d24db.png)
 
+<br>
+<br>
 
+## 간단하게 서버에 접속시 보여줄 컨텐츠 만들기
+
+---
 
 
 ```shell
@@ -63,20 +81,19 @@ Bastion 접속 중인 세션 확인 해보기
  Add-Content -Path "C:\inetpub\wwwroot\iisstart.htm" -Value $("Hello World from " + $env:computername)
 ```
 
-Public IP로 접속해보기
+<br>
+<br>
+
+## Public IP로 접속해보기
+
+---
 
 | 웹에서 접속 | 모바일에서 접속 |
 |-----|-----|
 |![access_vm_1](https://user-images.githubusercontent.com/4527194/214747020-fb9eccf6-7676-414a-91b6-b0a7739fedae.png)|![access_vm_2](https://user-images.githubusercontent.com/4527194/214747050-3a37d1e7-2431-4321-a6c8-fda10d51265d.png)|
 
-
-
-로드밸런서 설정에서 2개가 설정되어 있는 것을 확인 할 수 있다.
-![load_balancer_state](https://user-images.githubusercontent.com/4527194/214746238-5a8ab937-6c15-439b-a7ed-346030b1a960.png)
-
-시스템 구성도
-![structure](https://user-images.githubusercontent.com/4527194/214746442-537ce313-c6c8-4d28-b90d-671394590830.png)
-
+<br>
+<br>
 
 ## NAT
 
@@ -90,9 +107,15 @@ IP 패킷의 포트와 Source, Destination의 IP 주소등을 재기록하여 �
 
 사설 네트워크에 속한 여러 개의 호스트가 하나의 공인 IP 주소를 사용하여 인터넷에 접속하기 위함
 
+<br>
+<br>
 
 ## OSI 7-layer
 
 ---
+
+![image](https://user-images.githubusercontent.com/4527194/214781840-1412b553-eeaf-475e-914f-98189b59b429.png)
+
+네트워크 통신 과정을 구조화하여 국제표준으로 지정함
 
 
