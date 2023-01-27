@@ -213,7 +213,7 @@ else:
     
 - 참고자료 : 여러가지 query 하는 방법
 
-[SQL Server Basics](https://www.sqlservertutorial.net/sql-server-basics/)
+    [SQL Server Basics](https://www.sqlservertutorial.net/sql-server-basics/)
 
 
 ## ****Blob 관리****
