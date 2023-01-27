@@ -212,6 +212,7 @@ else:
     [Download Microsoft® ODBC Driver 13 for SQL Server® - Windows + Linux from Official Microsoft Download Center](https://www.microsoft.com/ko-kr/download/confirmation.aspx?id=50420)
     
 - 참고자료 : 여러가지 query 하는 방법
+
 [SQL Server Basics](https://www.sqlservertutorial.net/sql-server-basics/)
 
 
