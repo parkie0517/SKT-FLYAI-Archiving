@@ -185,7 +185,7 @@ else:
   print("Done.")
 ```
 
-# 
+# 오후
 
 ## ****Azure에서 SQL Database 생성 및 쿼리****
 
