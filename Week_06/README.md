@@ -7,6 +7,8 @@
 ### [[Day 4]](./Day4)
 - Azure App Service에 Python(Django 또는 Flask) 웹앱 배포하기
 - Azure Database for MySQL 유연한 서버 만들기
+- Azure에서 SQL Database 생성 및 쿼리
+- Blob 관리
 
 ### [[Day 5]](./Day5)
 - 환경 구축하기 (Docker, Kubernetes, Ubuntu 20.04)
