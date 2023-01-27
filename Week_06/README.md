@@ -7,3 +7,5 @@
 ### [[Day 4]](./Day4)
 
 ### [[Day 5]](./Day5)
+- 환경 구축하기 (Docker, Kubernetes, Ubuntu 20.04)
+- OS 관련 지식
