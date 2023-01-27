@@ -186,3 +186,55 @@ else:
 ```
 
 
+---
+
+Azure에서 SQL Database 생성 및 쿼리
+
+---
+
+1. SQL Database 생성
+
+[단일 데이터베이스 만들기 - Azure SQL Database](https://learn.microsoft.com/ko-kr/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal)
+
+1. 쿼리
+
+1) SSMS
+
+[SSMS: 연결 및 데이터 쿼리 - Azure SQL Database & SQL Managed Instance](https://learn.microsoft.com/ko-kr/azure/azure-sql/database/connect-query-ssms?view=azuresql)
+
+2) vscode
+
+[Visual Studio Code를 사용하여 연결 및 쿼리를 참조하세요. - Azure SQL Database & SQL Managed Instance](https://learn.microsoft.com/ko-kr/azure/azure-sql/database/connect-query-vscode?view=azuresql)
+
+3) python
+
+[Python용 Azure SQL Database 라이브러리](https://learn.microsoft.com/ko-kr/python/api/overview/azure/sql?view=azure-python)
+
+- odbc 다운로드
+    
+    [Download Microsoft® ODBC Driver 13 for SQL Server® - Windows + Linux from Official Microsoft Download Center](https://www.microsoft.com/ko-kr/download/confirmation.aspx?id=50420)
+    
+
+참고자료 : 여러가지 query 하는 방법
+
+[SQL Server Basics](https://www.sqlservertutorial.net/sql-server-basics/)
+
+---
+
+Blob 관리
+
+---
+
+1. 스토리지 계정 만들기
+
+[스토리지 계정 만들기 - Azure Storage](https://learn.microsoft.com/ko-kr/azure/storage/common/storage-account-create?tabs=azure-portal)
+
+1. Blob관리
+
+1) Azure
+
+[빠른 시작: Blob 업로드, 다운로드 및 나열 - Azure Portal - Azure Storage](https://learn.microsoft.com/ko-kr/azure/storage/blobs/storage-quickstart-blobs-portal)
+
+2) Python
+
+[빠른 시작: Python용 클라이언트 라이브러리 Azure Blob Storage](https://learn.microsoft.com/ko-kr/azure/storage/blobs/storage-quickstart-blobs-python?tabs=managed-identity%2Croles-azure-portal%2Csign-in-azure-cli)
