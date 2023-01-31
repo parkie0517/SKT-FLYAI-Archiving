@@ -27,7 +27,7 @@
 ```bash
 docker version
 ```
-![ex_screenshot](./img/untitled.png)
+[![ex_screenshot](./img/untitled.png)](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/commit/ff8ea5b6d2a86d3202404b5ac86bfa9d8d02f058)
 
 #### 2. docker 우분투 찾기
 
