@@ -35,27 +35,24 @@ docker version
 
 #### 3. docker 우분투 내려받기
     
-    ```bash
-    docker pull mysql 로 하지 말고
-    
-    docker pull mysql:8.0.22로 버전을 지정해줘야 한다.
-    ```
+```bash
+docker pull mysql 로 하지 말고
+docker pull mysql:8.0.22로 버전을 지정해줘야 한다.
+```
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08536c1b-d4cb-44c5-afaf-d0ba31d7769e/Untitled.png)
 
 #### 4. docker 이미지를 Container 파일로 생성한다.
 ```bash
-    
-    docker create -it --name ubuntu_server ubuntu:20.04
-    
+docker create -it --name ubuntu_server ubuntu:20.04
 ```
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0acc7834-4730-4fdb-af46-186076fd8617/Untitled.png)
 
 #### 5. docker에서 start 버튼으로 서버 실행
 #### 6. docker 우분투 서버 접속
-    ```bash
-    docker attach ubuntu_server
-    ```
+```bash
+docker attach ubuntu_server
+```
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de1fa53d-c83f-4153-b674-f6058dd9b6d6/Untitled.png)
 
