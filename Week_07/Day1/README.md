@@ -32,7 +32,7 @@ docker version
 
 #### 2. docker 우분투 찾기
 
-[![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3a5ee84-fbbc-4067-a828-942756eff979/Untitled.png)](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/blob/main/Week_07/Day1/img/Untitled%20(1).png?raw=true)
+![image](https://user-images.githubusercontent.com/90374185/215736837-76b7d35c-b823-429d-85e1-fe03e777db52.png)
 
 #### 3. docker 우분투 내려받기
     
@@ -41,13 +41,13 @@ docker pull mysql 로 하지 말고
 docker pull mysql:8.0.22로 버전을 지정해줘야 한다.
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08536c1b-d4cb-44c5-afaf-d0ba31d7769e/Untitled.png)
+![image](https://user-images.githubusercontent.com/90374185/215736878-e5d43716-f106-4728-8bb9-589bef8fbd2d.png)
 
 #### 4. docker 이미지를 Container 파일로 생성한다.
 ```bash
 docker create -it --name ubuntu_server ubuntu:20.04
 ```
-[![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0acc7834-4730-4fdb-af46-186076fd8617/Untitled.png)](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/blob/main/Week_07/Day1/img/Untitled%20(2).png?raw=true)
+![image](https://user-images.githubusercontent.com/90374185/215736930-6bd18e9c-6779-47eb-81b5-49ad0fc96f39.png)
 
 #### 5. docker에서 start 버튼으로 서버 실행
 #### 6. docker 우분투 서버 접속
@@ -55,7 +55,7 @@ docker create -it --name ubuntu_server ubuntu:20.04
 docker attach ubuntu_server
 ```
 
-[![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de1fa53d-c83f-4153-b674-f6058dd9b6d6/Untitled.png)](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/blob/main/Week_07/Day1/img/Untitled%20(3).png?raw=true)
+![image](https://user-images.githubusercontent.com/90374185/215736971-85b5de4b-8dd3-4b3d-8d32-4809ca3aa662.png)
 
 cd / : 루트로 이동
 
@@ -66,7 +66,7 @@ ll : 파일 리스트
 apt-get update
 ```
 
-[![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5f63d149-0380-4739-957b-2670eac0aa69/Untitled.png)](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/blob/main/Week_07/Day1/img/Untitled%20(4).png?raw=true)
+![image](https://user-images.githubusercontent.com/90374185/215737006-13f1fcb6-6f7d-4d61-8e71-43463821f537.png)
 
 ### 우분투 업그레이드시 에러 고치는법
 ```bash
