@@ -14,7 +14,7 @@
 
 ## KoGPT2 활용해서 간단한 챗봇 만들기
 
-(./Day1/KoGPT2_챗봇_ipynb의_사본.ipynb)
+Week_07/Day1/KoGPT2_챗봇_ipynb의_사본.ipynb
 
 ## 나만의 데이터셋으로 KoGPT2 활용해서 챗봇 만들기
 
