@@ -24,12 +24,15 @@
 [[Docker] Windows10 환경에서 Docker에 Ubuntu 설치](https://hermeslog.tistory.com/498)
 
 #### 1. 버전 확인
+'''bash
+docker version
+'''
 
-![Untitled](%E1%84%8E%E1%85%A2%E1%86%BA%E1%84%87%E1%85%A9%E1%86%BA%20672ee8d635e2461ba6c853f1aa21052e/Untitled.png)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/416bb018-6646-4c84-8053-fd9b4cf80b4a/Untitled.png)
 
 #### 2. docker 우분투 찾기
 
-![Untitled](%E1%84%8E%E1%85%A2%E1%86%BA%E1%84%87%E1%85%A9%E1%86%BA%20672ee8d635e2461ba6c853f1aa21052e/Untitled%201.png)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3a5ee84-fbbc-4067-a828-942756eff979/Untitled.png)
 
 #### 3. docker 우분투 내려받기
     
