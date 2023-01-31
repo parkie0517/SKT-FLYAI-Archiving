@@ -32,7 +32,7 @@ docker version
 
 #### 2. docker 우분투 찾기
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3a5ee84-fbbc-4067-a828-942756eff979/Untitled.png)
+[![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3a5ee84-fbbc-4067-a828-942756eff979/Untitled.png)](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/blob/main/Week_07/Day1/img/Untitled%20(1).png?raw=true)
 
 #### 3. docker 우분투 내려받기
     
@@ -47,7 +47,7 @@ docker pull mysql:8.0.22로 버전을 지정해줘야 한다.
 ```bash
 docker create -it --name ubuntu_server ubuntu:20.04
 ```
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0acc7834-4730-4fdb-af46-186076fd8617/Untitled.png)
+[![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0acc7834-4730-4fdb-af46-186076fd8617/Untitled.png)](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/blob/main/Week_07/Day1/img/Untitled%20(2).png?raw=true)
 
 #### 5. docker에서 start 버튼으로 서버 실행
 #### 6. docker 우분투 서버 접속
@@ -55,7 +55,7 @@ docker create -it --name ubuntu_server ubuntu:20.04
 docker attach ubuntu_server
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de1fa53d-c83f-4153-b674-f6058dd9b6d6/Untitled.png)
+[![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de1fa53d-c83f-4153-b674-f6058dd9b6d6/Untitled.png)](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/blob/main/Week_07/Day1/img/Untitled%20(3).png?raw=true)
 
 cd / : 루트로 이동
 
@@ -66,7 +66,7 @@ ll : 파일 리스트
 apt-get update
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5f63d149-0380-4739-957b-2670eac0aa69/Untitled.png)
+[![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5f63d149-0380-4739-957b-2670eac0aa69/Untitled.png)](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/blob/main/Week_07/Day1/img/Untitled%20(4).png?raw=true)
 
 ### 우분투 업그레이드시 에러 고치는법
 ```bash
