@@ -24,9 +24,9 @@
 [[Docker] Windows10 환경에서 Docker에 Ubuntu 설치](https://hermeslog.tistory.com/498)
 
 #### 1. 버전 확인
-'''bash
+```bash
 docker version
-'''
+```
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/416bb018-6646-4c84-8053-fd9b4cf80b4a/Untitled.png)
 
