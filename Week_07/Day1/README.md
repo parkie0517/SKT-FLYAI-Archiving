@@ -27,7 +27,7 @@
 ```bash
 docker version
 ```
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/416bb018-6646-4c84-8053-fd9b4cf80b4a/Untitled.png)
+![ex_screenshot](./img/untitled.png)
 
 #### 2. docker 우분투 찾기
 
