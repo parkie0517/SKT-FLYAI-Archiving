@@ -111,7 +111,7 @@ cd /root/mental-health-chatbot-master
 챗봇 실행
 streamlit run server chatbot.py --server.port 80
 
-브라우저에서 당신의 PC IP로 접속
+브라우저에서 본인 PC IP로 접속
 http://"본인 IP":80
 ```
 
