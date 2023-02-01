@@ -7,7 +7,8 @@
 - Chatbot 컨테이너- DB 컨테이너 연동
 
 ### [[Day 3]](./Day3)
-- 
+- Chatbot 컨테이너- DB 컨테이너 연동
+- Chatbot DB 저장
 
 ### [[Day 4]](./Day4)
 - 
