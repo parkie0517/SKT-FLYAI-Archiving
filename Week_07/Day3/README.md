@@ -283,7 +283,7 @@ docker cp chatbot-webserver:/root/mental-health-chatbot-master C:\WORK\Project\A
 
 chatbot-webserver 컨테이너의 /root/mental-health-chatbot-master 폴더를 로컬의 C:\WORK\Project\Ai\Chatbot\ 에 복사가 된다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f5a82a71-db11-4391-bec8-8781e2e837f5/Untitled.png)
+![image](https://user-images.githubusercontent.com/51157811/215958678-84b9731a-12cd-4121-a3b0-ab230ca23776.png)
 
 이후 VSCode와 같은 에디터에서 수정 가능
 
@@ -291,7 +291,7 @@ chatbot-webserver 컨테이너의 /root/mental-health-chatbot-master 폴더를 �
 
 pymysql.connect(host='172.23.243.67' 에서 IP를 변경 후 저장 해보자.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/363a841b-7e00-4411-9cd4-4ab4e74c5aae/Untitled.png)
+![image](https://user-images.githubusercontent.com/51157811/215958704-dd6ca18e-fc03-4580-a4c3-a0b5c4c86135.png)
 
 ```bash
 docker cp C:\WORK\Project\Ai\Chatbot\mental-health-chatbot-master chatbot-webserver:/root/
@@ -327,3 +327,193 @@ chatbot-webserver apptools/chatbot-webserver:1.0 /bin/bash
 볼륨을 사용하면 따로 cp 할 필요 없이 동기화 가능 (매우 유용!) 
 
 만약 이미 컨테이너를 띄운 상태면 적용하기 어려움(방법은 있음. 그러나 초기 컨테이너 생성시 하는 것 추천)
+
+
+## 회원가입 flask 파일 수정
+## app.py
+
+```python
+from flask import Flask, render_template, request, redirect, session
+from werkzeug.utils import secure_filename
+from sqlalchemy import create_engine, text
+
+app = Flask(__name__, static_folder='./img')
+app.config['SECRET_KEY'] = 'apptools'
+
+app.config.from_pyfile('config.py')
+database = create_engine(app.config['DB_URL'], encoding = "utf-8")
+app.database = database
+
+@app.route('/')
+def index():
+    if 'ss_name' in session:
+        ss_name = session['ss_name']
+        ss_img = session['ss_img']
+    else:
+        ss_name = ""
+        ss_img = ""
+    return render_template('index.html', ss_name=ss_name, ss_img=ss_img)
+
+@app.route('/login', methods=['GET','POST'])
+def login():
+    if request.method == 'GET':
+        join = request.args.get('join')
+        return render_template('login.html', join=join)
+    elif request.method == 'POST':
+        userid = request.form['userid']
+        userpw = request.form['userpw']
+
+        sql = f"""select name,img from mem where 
+        userid = '{userid}' and 
+        userpw = SHA2('{userpw}', 256);"""
+        user = app.database.execute(text(sql)).fetchone()
+        if user:
+            session['ss_id'] = userid
+            session['ss_name'] = user['name']
+            session['ss_img'] = user['img']
+            return redirect('/')            
+        else:
+            return render_template('login.html', msg='아이디 또는 비밀번호가 틀립니다.')
+
+@app.route('/logout')
+def logout():
+    session['ss_id'] = False
+    session['ss_name'] = False
+    return redirect('/')
+
+@app.route('/join', methods=['GET','POST'])
+def join():
+    if request.method == 'GET':
+        return render_template('join.html')
+    else: # POST
+        userid = request.form['userid']
+        userpw = request.form['userpw']
+        name = request.form['name']
+        sex = request.form['sex']
+        post_num = request.form['post_num']
+        address = request.form['address']
+        tel = request.form['tel']
+        age = request.form['age']
+
+        f = request.files['img1']
+        if f:
+            f.save("./img/" + secure_filename(f.filename))
+            img = f.filename
+        else:
+            img = ""
+
+        # DB 인젝션 공격이 있는 검토
+        # 이미 가입 되어 있는지 확인
+        # DB에 회원정보 저장하기
+        app.database.execute(text("""
+        insert into mem (
+            userid, userpw, name, sex, post_num, address, tel, age, img
+        ) values (
+            :userid, SHA2(:userpw, 256), :name, :sex, :post_num, :address, :tel, :age, :img);"""), {
+                'userid' : userid,
+                'userpw' : userpw,
+                'name' : name,
+                'sex' : sex,
+                'post_num' : post_num,
+                'address' : address,
+                'tel' : tel,
+                'age' : age,
+                'img' : img,
+            }).lastrowid
+        return redirect('/login?join=y')
+
+@app.route('/list')
+def list_members():
+    sql = """select num, userid, name, sex, address, age, img from mem;"""
+    user_list = app.database.execute(text(sql)).all()
+    return render_template('list.html', user_list=user_list, userid=session['ss_id'])
+
+@app.route('/delete', methods=['GET'])
+def delete():
+    num = request.args.get('num')
+    if session['ss_id'] == 'admin':
+        sql = "delete from mem where num = '%s'" % (num)
+    else:
+        sql = "delete from mem where num = '%s' and userid='%s'" % (num, session['ss_id'])
+    app.database.execute(text(sql)).lastrowid    
+    # 사진파일 삭제 (세션)
+    return redirect('/list')
+
+@app.route('/edit', methods=['GET','POST'])
+def edit():
+    if request.method == 'GET':
+        num = request.args.get('num')
+        sql = f"""select * from mem where num = '{num}'"""
+        user = app.database.execute(text(sql)).fetchone()
+        return render_template('edit.html', user=user)
+    else: # POST
+        num = request.form['num']
+        userid = request.form['userid']
+        name = request.form['name']
+        sex = request.form['sex']
+        post_num = request.form['post_num']
+        address = request.form['address']
+        tel = request.form['tel']
+        age = request.form['age']
+
+        f = request.files['img1']
+        if f:
+            f.save("./img/" + secure_filename(f.filename))
+            sql_img = ", img = '%s'" % (f.filename)
+        else:
+            sql_img = ""
+
+        sql = f"""
+        update mem set
+        userid='{userid}', 
+        name='{name}', 
+        sex='{sex}', 
+        post_num='{post_num}', 
+        address='{address}', 
+        tel='{tel}', 
+        age='{age}'
+        {sql_img}
+        where num = {num}
+        """
+        app.database.execute(text(sql)).lastrowid
+        return redirect('/list')
+
+@app.route('/report', methods=['GET','POST'])
+def report():
+    return render_template('report.html', ss_name=session['ss_name']);
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+## index.html
+
+```html
+{% extends "base.html" %}
+{% block content %}
+<p>로그인 하기</p>
+{% if ss_name %}
+<h2>{{ss_name}}님 반갑습니다.</h2>
+<p><a href="/report">[상담 리포트 보기]</a></p>
+{% if ss_name %}
+<p><img src="/img/{{ss_img}}" width="400" /></p>
+<p><a href="/list">회원목록 보기</a></p>
+{% endif %}
+<a href="/logout" target="_blank">LOOUT</a>
+{% else %}
+<a href="/login" target="_blank">LOGIN</a>
+{% endif %}
+{% endblock %}
+```
+
+## report.html
+
+```html 
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h3>{{ss_name}}님의 심리 상담 리포트</h3>
+    
+</div>
+{% endblock %}
+``` 
