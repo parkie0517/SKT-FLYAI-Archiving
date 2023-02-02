@@ -36,9 +36,9 @@
 | :---: | :--- | :--- | :---: |
 | 1/9 | DNN 개요 | `DNN`  | 장준영<br>김지성 | 
 | 1/10 | DNN, 딥러닝 종류 | `DNN` `CNN` | 구미진<br>김태형 | 
-| 1/11 | 디지털 영상처리(OpenCV) | `OpenCV` `ImageProcessing` | 강두원<br>이예진 | 
-| 1/12 | 디지털 영상처리(OpenCV) | `OpenCV` `영상파일 처리` | 한원배<br>이은비 | 
-| 1/13 | 디지털 영상처리(OpenCV) | `OpenCV` `이미지 채널 처리` | 박세현<br>강정훈 | 
+| 1/11 | 디지털 영상처리(`OpenCV`) | `OpenCV` `ImageProcessing` | 강두원<br>이예진 | 
+| 1/12 | 디지털 영상처리(`OpenCV`) | `OpenCV` `영상파일 처리` | 한원배<br>이은비 | 
+| 1/13 | 디지털 영상처리(`OpenCV`) | `OpenCV` `이미지 채널 처리` | 박세현<br>강정훈 | 
 
 ### Week 05
 | 날짜 | 주제 | 학습 내용 | 발표자 |
@@ -60,8 +60,8 @@
 | 날짜 | 주제 | 학습 내용 | 발표자 |
 | :---: | :--- | :--- | :---: |
 | 1/30 | 챗봇 | `Chatbot` `Docker` | 김지성<br>김태형|
-| 1/31 | 챗봇 |`Chatbot`, `Docker`, `SQL`, `Flask`, `Ubuntu`| 강정훈 <br> 장준영  |
+| 1/31 | 챗봇 |`Chatbot` `Docker` `SQL` `Flask` `Ubuntu`| 강정훈 <br> 장준영  |
 | 2/1 | 챗봇 |  `Chatbot` `Docker` `flask` `Ubuntu` | 이예진<br>박세현 |
-| 2/2 |  |  | 구미진<br>한원배 |
+| 2/2 | 디지털 (`OpenCV`) | `화소처리`  | 구미진<br>한원배 |
 | 2/3 |  |  | 강두원<br>이은비 | 
 
