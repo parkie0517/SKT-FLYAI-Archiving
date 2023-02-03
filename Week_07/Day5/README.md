@@ -70,7 +70,20 @@
 <img width="570" alt="image" src="https://user-images.githubusercontent.com/28096454/216527260-70944827-7544-4177-b60e-ba1e2c812402.png">
 
 ## 모폴로지
-### 1) 침식 연산
-### 2) 팽창 연산
+### 1) 침식 연산(객체 축소)
+영상 내에 존재하는 잡음 같은 작은 크기의 객체 제거 가능    
+소금-후추 잡음과 같은 임펄스 잡음 제거    
+     
+<img width="482" alt="image" src="https://user-images.githubusercontent.com/28096454/216528360-be4c07c3-1cb4-40a7-a730-d19c8102ba73.png">
+
+### 2) 팽창 연산(객체 팽창)
+하나의 오브젝트 내에 덩어리 잡음이 있을 경우 2개의 오브젝트로 인식될 수 있는데 팽창 연산을 통해 이를 해결할 수 있다.  
+
+<img width="453" alt="image" src="https://user-images.githubusercontent.com/28096454/216531881-5c9a6482-f86b-4612-8fbc-6e1e2905d520.png">
+    
+
 ### 3) 열림 연산과 닫힘 연산
+열림 연산 : 침식 연산-> 팽창 연산    
+닫힘 연산 : 팽창 연산-> 침식 연산    
+
 
