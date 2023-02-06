@@ -5,17 +5,7 @@
 
 ![image](https://user-images.githubusercontent.com/79077316/216868235-697a4d67-763e-41cc-ba21-3d2eaeaf3b5c.png)
 
-## 가상 머신에 도커 세팅하기
-
-### 1) **도커 vs 가상머신**
-
-![image](https://user-images.githubusercontent.com/79077316/216868309-8b85b47e-cb83-47d6-95fd-9670a9e24141.png)
-
-- 도커와 가상 머신의 가장 큰 차이는 게스트 OS의 유무
-- VM에는 Guest OS가 설치되는 반면 도커의 컨테이너에는 Guest OS를 설치하지 않음 → 자원의 효율성에서 차이가 생김
-- VM은 하나씩 늘어날 때마다 OS를 위한 자원을 할당해주어야 하는 반면 도커는 어플리케이션을 구동하는데 필요한 패키지만 있으면 컨테이너를 구동시킬 수 있음
-
-### 2) [비교 실습] ****[Azure Portal에서 Virtual Machine Scale Set 만들기](https://learn.microsoft.com/ko-kr/azure/virtual-machine-scale-sets/quick-create-portal)****
+## [비교 실습] ****[Azure Portal에서 Virtual Machine Scale Set 만들기](https://learn.microsoft.com/ko-kr/azure/virtual-machine-scale-sets/quick-create-portal)****
 
 - Azure Portal에서 Load Balancer 만들기
 - Virtual Machine Scale Set 만들기
@@ -24,7 +14,7 @@
 
 ![image](https://user-images.githubusercontent.com/79077316/216868374-e2d4d5ad-651c-4383-82a2-f850fb74c378.png)
 
-### 3) `Hyper-V` 우분투 가상 컴퓨터 실습
+## `Hyper-V` 우분투 가상 컴퓨터 실습
 
 - 우분투 터미널에서 다음 코드 실행
 
@@ -39,3 +29,33 @@ sudo apt-get install vim
 - [우분투 고급 세션 모드 설정하기](https://lucidmaj7.tistory.com/343)
     - 윈도우 Hyper-V로 우분투에 접속하면 마우스랑 키보드 입력이 느려지는 문제를 해결하기 위해 `고급 세션 모드(enhanced session mode)`가 추가됨
     - 고급 세션 모드는 내부적으로 RDP를 이용해서 VM에 접속하는 방식
+
+## Docker
+
+### 1) 컨테이너
+
+- 컨테이너(Container)는 개별 Software의 실행에 필요한 **실행환경을 독립적으로 운용할 수 있도록** 기반환경 또는 다른 실행환경과의 간섭을 막고 **실행의 독립성을 확보해주는 운영체제 수준의 격리 기술**
+- 컨테이너는 애플리케이션을 실제 구동 환경으로부터 추상화할 수 있는 논리 패키징 메커니즘을 제공
+
+### 2) 컨테이너 `vs` 가상머신
+
+- 컨테이너와 가상머신 모두 독립적인 실행 환경을 구성할 수 있도록 하는데 둘의 차이는 다음과 같다
+
+![image](https://user-images.githubusercontent.com/79077316/216879183-ab045632-8dae-4c18-9f77-daf0dc2183ea.png)
+
+- 컨테이너
+    - 하나의 Host OS 위에서 마치 각각의 독립적인 프로그램처럼 관리되고 실행됨 (하나의 프로세스)
+    - 불필요한 OS 만드는 작업 및 Infra를 독립적으로 나눌 필요가 없어서 확장성이 좋고 속도가 빠름
+- 가상머신
+    - HyperVisor가 있음. 컴퓨터가 가지고 있는 리소스들을 VM 별로 분배하는 역할
+    - 각 VM에서는 독립적인 Guest OS를 가지고 있음
+    - 독립적인 플랫폼을 하나씩 늘릴 때마다 불필요한 OS를 만드는 작업을 반복함 → 확장성이 떨어지고, 리소스 효율성 측면에서도 비효율적임
+    
+### 3) 도커
+
+- 도커는 **컨테이너 기반**의 오픈소스 가상화 플랫폼
+- 도커는 리눅스 컨테이너를 실행하고 관리하는 엔진
+- Docker를 이용해서 인프라에서 애플리케이션을 분리하여 **컨테이너로 추상화시킴**
+- 하나의 호스트 OS안에서 여러 컨테이너를 동시에 실행할 수 있음
+- 도커는 컨테이너의 라이프 사이클을 관리하고 어플리케이션을 **오케스트레이션**(Work flow의 자동화된 서비스)으로 배포할 수 있음
+
