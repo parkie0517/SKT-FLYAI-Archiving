@@ -25,10 +25,33 @@ sudo apt-get install vim
 ```
 
 ![image](https://user-images.githubusercontent.com/79077316/216868393-f01aa8f1-bc9c-43e9-a071-4979a41297c3.png)
+- vim
+    - [설명서](https://www.joinc.co.kr/w/Site/Vim/Documents/UsedVim)
+    - command line 기반 vi 텍스트 편집 에디터
+    - i랑 :wq만 기억해도 웬만한 것은 다 된다.
 
 - [우분투 고급 세션 모드 설정하기](https://lucidmaj7.tistory.com/343)
+```powershell
+sudo apt-get update
+
+sudo apt-get install --yes git
+
+git clone https://github.com/Hinara/linux-vm-tools.git
+
+cd linux-vm-tools/ubuntu/20.04
+
+chmod +x ./install.sh
+sudo ./install.sh
+
+sudo reboot
+
+sudo ./install.sh
+
+Set-VM -VMName '[VM이름]' -EnhancedSessionTransportType HvSocket
+```
     - 윈도우 Hyper-V로 우분투에 접속하면 마우스랑 키보드 입력이 느려지는 문제를 해결하기 위해 `고급 세션 모드(enhanced session mode)`가 추가됨
     - 고급 세션 모드는 내부적으로 RDP를 이용해서 VM에 접속하는 방식
+    - `ctrl+v`가 된다
 
 ## Docker
 
@@ -58,4 +81,55 @@ sudo apt-get install vim
 - Docker를 이용해서 인프라에서 애플리케이션을 분리하여 **컨테이너로 추상화시킴**
 - 하나의 호스트 OS안에서 여러 컨테이너를 동시에 실행할 수 있음
 - 도커는 컨테이너의 라이프 사이클을 관리하고 어플리케이션을 **오케스트레이션**(Work flow의 자동화된 서비스)으로 배포할 수 있음
+- wsl2는 내부에 있는 리눅스 커널 
+```powershell
+docker run -d -p 80:80 docker/getting-started
+```
+- 외부 포트와 내부 포트를 지정해서 들어갈 수 있다
+```powershell
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+sudo usermod -a -G docker $USER
+$ sudo service docker restart
+
+docker run --name demo3 -d busybox sh -c "while true; do $(echo date); sleep 1; done"
+```
+기타 명령어
+from 
+
+- base image로 어떤 것을 사용할지 명시
+
+run
+
+- 실행할 명령어
+
+cmd
+
+- 바로 실행시키고 싶은 것
+
+WORKDIR
+
+- 기본 디렉
+
+ENV
+
+- 환경변수
+
+EXPOSE
+
+- 포트 지정
+
+dockerfile을 이용해 환경 설정, 라이브러리 지정, 명령 실행 등 자동화 역시 가능
