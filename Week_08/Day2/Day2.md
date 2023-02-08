@@ -191,12 +191,12 @@ kubectl apply -f service.yaml
 kubectl get service
 # PORT 80:<PORT> 숫자 확인
 curl -X GET $(minikube ip):<PORT>
-# 이렇게 서비스를 통해서 클러스터 외부에서도 정상적으로 pod 에 접속할 수 있는 것을 확인합니다. $(minikube
-ip) 시스템에 정의 되어 있음.
+# 이렇게 서비스를 통해서 클러스터 외부에서도 정상적으로 pod 에 접속할 수 있는 것을 확인합니다.
+$(minikube ip) 시스템에 정의 되어 있음.
 ```
 
 ## PVC
-- Persistent Volume(PV), Persistent Volume Claim(PVC)는 stateless한 Pod를 영구적으로(persistent) 데이터를 보존하고 싶은 경우 사용는 리소스
+- Persistent Volume(PV), Persistent Volume Claim(PVC)는 stateless한 Pod를 영구적으로(persistent) 데이터를 보존하고 싶은 경우 사용하는 리소스
     - PV: 관리자가 생성한 실제 저장 공간의 정보를 담고 있음
     - PVC: 용자가 요청한 저장 공간의 스펙에 대한 정보를 담고 있음
         - 보존하고 싶은 데이터가 있다면 `Pod에 PVC를 mount해서 사용`해야 
