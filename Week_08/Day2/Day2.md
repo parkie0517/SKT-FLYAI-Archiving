@@ -175,6 +175,7 @@ spec: # 메인 파트 : resource 의 desired state 를 명시
         ports:
         - containerPort: 80 # container 의 내부 Port
 ```
+    
 ## Service
 - 쿠버네티스에 배포한 애플리케이션(Pod)을 외부에서 접근하기 쉽게 추상화한 리소스
 - Pod는 언제든지 삭제될 수 있기 때문에 고정된 IP로 원하는 Pod에 접근하기에는 어려움이 있음 → 클러스터의 내/외부에서 접근할 Pod의 IP가 아 Service를 통해 접근함
@@ -200,4 +201,4 @@ $(minikube ip) 시스템에 정의 되어 있음
 - Persistent Volume(PV), Persistent Volume Claim(PVC)는 stateless한 Pod를 영구적으로(persistent) 데이터를 보존하고 싶은 경우 사용하는 리소스
     - PV: 관리자가 생성한 실제 저장 공간의 정보를 담고 있음
     - PVC: 용자가 요청한 저장 공간의 스펙에 대한 정보를 담고 있음
-        - 보존하고 싶은 데이터가 있다면 `Pod에 PVC를 mount해서 사용`해야 
+        - 보존하고 싶은 데이터가 있다면 `Pod에 PVC를 mount해서 사용`해야 함
