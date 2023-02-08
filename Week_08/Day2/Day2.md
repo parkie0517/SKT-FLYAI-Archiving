@@ -98,7 +98,7 @@ $ kubectl describe pod counter
 ### 로그 확인
 
 ```bash
-kubectl logs <pod-name> {-f} # f옵션 : 로그를 계속 보여줌.
+kubectl logs <pod-name> {-f} # -f 옵션 : 로그를 계속 보여줌.
 kubectl logs <pod-name> -c <container-name> {-f}
 ```
 
