@@ -147,7 +147,6 @@ spec: # 메인 파트 : resource 의 desired state 를 명시
 ### Deployment Auto-healing
 - kubectl delete pod <pod-name> 실행
 - 위의 명령어가 실행됨에도 불구하고, 기존 pod 이 삭제되고 `동일한 pod 이 새로 하나 생성`됨(AGE으로 확인할 수 있음)
-```
 
 ### Deployment Scaling
 - kubectl scale deployment/nginx-deployment --replicas=<변경하고자 하는 replica의 갯수>
@@ -160,7 +159,7 @@ metadata: # 메타데이터 : name, namespace, labels, annotations 등을 포함
   labels:
     app: nginx
 spec: # 메인 파트 : resource 의 desired state 를 명시
-  replicas: 3 # 동일한 template 의 pod 을 3 개 복제본으로 생성
+  replicas: 3 # 동일한 template 의 pod 을 3개 복제본으로 생성
   selector:
     matchLabels:
       app: nginx
