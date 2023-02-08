@@ -181,9 +181,9 @@ spec: # 메인 파트 : resource 의 desired state 를 명시
     - Service는 고정된 IP 를 가지며, Service는 하나 혹은 여러 개의 Pod과 매칭
     - 클라이언트가 Service의 주소로 접근하면, Service에 매칭된 Pod에 접속됨
 - Type
-    - ClusterIP: 클러스터 내부에서만 접근 가
+    - ClusterIP: 클러스터 내부에서만 접근 가능
     - NodePort: 클러스터 외부 노출
-    - LoadBalncer: 클러스터 외부에서 접근이 가능하지만 LoadBalancing 역할을 하는 모듈이 필
+    - LoadBalncer: 클러스터 외부에서 접근이 가능하지만 LoadBalancing 역할을 하는 모듈이 필요함
 ``` 
 vi service.yaml
 # 파일을 열어 위의 내용을 복사 붙여넣기 합니다.
@@ -199,4 +199,4 @@ ip) 시스템에 정의 되어 있음.
 - Persistent Volume(PV), Persistent Volume Claim(PVC)는 stateless한 Pod를 영구적으로(persistent) 데이터를 보존하고 싶은 경우 사용는 리소스
     - PV: 관리자가 생성한 실제 저장 공간의 정보를 담고 있음
     - PVC: 용자가 요청한 저장 공간의 스펙에 대한 정보를 담고 있음
-        - 보존하고 싶은 데이터가 있다면 `Pod에 PVC를 mount해서 사용`해야 한다
+        - 보존하고 싶은 데이터가 있다면 `Pod에 PVC를 mount해서 사용`해야 
