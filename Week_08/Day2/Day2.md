@@ -192,8 +192,7 @@ kubectl apply -f service.yaml
 kubectl get service
 # PORT 80:<PORT> 숫자 확인
 curl -X GET $(minikube ip):<PORT>
-# 이렇게 서비스를 통해서 클러스터 외부에서도 정상적으로 pod 에 접속할 수 있는 것을 확인합니다.
-$(minikube ip) 시스템에 정의 되어 있음 
+# 이렇게 서비스를 통해서 클러스터 외부에서도 정상적으로 pod 에 접속할 수 있는 것을 확인합니다. $(minikube ip) 시스템에 정의 되어 있음 
 ```
 
 ## PVC
