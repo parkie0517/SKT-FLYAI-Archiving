@@ -47,11 +47,11 @@ minikube status #확인
     ```
     
 
-## POD
+## Pod
 
-- POD : 쿠버네티스에서 `가장 작은` 단위
+- Pod : 쿠버네티스에서 `가장 작은` 단위
 - `1개 이상의 컨테이너가 캡슐화` 되어 클러스터 안에서 배포
-    - 대부분 하나의 POD는 하나의 컨테이너가 구성되어 있음 (→ 한 Pod를 컨테이너로 생각해도 됨)
+    - 대부분 하나의 Pod는 하나의 컨테이너가 구성되어 있음 (→ 한 Pod를 컨테이너로 생각해도 됨)
 - 외부에서 연결하기 위해 포트포워딩이 필요함.
 
 ```bash
@@ -68,8 +68,10 @@ kubectl port-forward nginx 18080:8080
 ```
 
 ## YAML
-
+- 쿠버네티스는 명령어(대부분 작업은 kubectl 명령어로 실행)로도 사용할 수 있지만, YAML 파일을 더 많이 사용함.
 [Transform YAML into JSON - Online YAML Tools](https://onlineyamltools.com/convert-yaml-to-json)
+- 컨테이너뿐만 아니라 `거의 모든 리소스 오브젝트들`에서 사용 가능.
+    - 컨테이너의 설정값(ConfigMap), 비밀값(Secrets)
 
 - `---` : 구분선. 여러개의 Yaml document 작성 가능.
 
@@ -78,7 +80,7 @@ $ vi pod.yaml
 ```
 
 ```yaml
-apiVersion: v1 # kubernetes resource 의 API Version
+apiVersion: v1 # kubernetes resource의 API Version
 kind: Pod # kubernetes resource name
 metadata: # 메타데이터 : name, namespace, labels, annotations 등을 포함
   name: counter
@@ -90,9 +92,9 @@ spec: # 메인 파트 : resource 의 desired state 를 명시
 ```
 
 ```bash
-$ kubectl apply -f pod.yaml
-$ kubectl get pod
-$ kubectl describe pod counter
+$ kubectl apply -f pod.yaml # 쿠버네티스 생성
+$ kubectl get pod # kubectl get <오브젝트 이름>: 특정 오브젝트의 목록을 확인.
+$ kubectl describe pod counter # kubectl describe pod <pod 이름>: pod의 자세한 정보를 
 ```
 
 ### 로그 확인
