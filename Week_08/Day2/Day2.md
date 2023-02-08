@@ -49,8 +49,9 @@ minikube status #확인
 
 ## POD
 
-- POD : 쿠버네티스에서 가장 작은 단위
-- 대부분 하나의 POD는 하나의 컨테이너가 구성되어 있음 (→ 한 Pod를 컨테이너로 생각해도 됨)
+- POD : 쿠버네티스에서 `가장 작은` 단위
+- `1개 이상의 컨테이너가 캡슐화` 되어 클러스터 안에서 배포
+    - 대부분 하나의 POD는 하나의 컨테이너가 구성되어 있음 (→ 한 Pod를 컨테이너로 생각해도 됨)
 - 외부에서 연결하기 위해 포트포워딩이 필요함.
 
 ```bash
@@ -101,15 +102,13 @@ kubectl logs <pod-name> {-f} # f옵션 : 로그를 계속 보여줌.
 kubectl logs <pod-name> -c <container-name> {-f}
 ```
 
-## [Pod](https://seongjin.me/kubernetes-pods)
-- 파드(Pod)는 `1개 이상의 컨테이너가 캡슐화` 되어 클러스터 안에서 배포되는 가장 작은 단위의 객체
- 
-# 용량 늘리기
+### 용량 늘리기
 - [참고 링크1](https://www.nucleiotechnologies.com/increasing-disk-space-on-file-system-root-ubuntu-20-04)
 - [참고 링크2](https://hiseon.me/linux/ubuntu/modify-partition-size)
 - Hyper-V로 디스크 용량 늘려주고 
 -`sudo apt-get update && sudo apt-get install gparted` 설치 후 파티션 조정
-## Deployment 실습
+
+### Deployment 실습
 https://visionhong.tistory.com/41
 
 
