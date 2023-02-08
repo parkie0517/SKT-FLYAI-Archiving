@@ -20,7 +20,7 @@ minikube --help #설치확인
 
 ## kubectl 설치
 
-- kubectl : 쿠버네티스 API 호출을 위한 command-line tool
+- kubectl : 쿠버네티스 API 호출을 위한 `command-line tool`
 
 ```bash
 curl -LO https://dl.k8s.io/release/v1.22.1/bin/linux/amd64/kubectl
