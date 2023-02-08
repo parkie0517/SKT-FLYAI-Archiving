@@ -184,6 +184,7 @@ spec: # 메인 파트 : resource 의 desired state 를 명시
     - ClusterIP: 클러스터 내부에서만 접근 가능
     - NodePort: 클러스터 외부 노출
     - LoadBalncer: 클러스터 외부에서 접근이 가능하지만 LoadBalancing 역할을 하는 모듈이 필요함
+    
 ``` 
 vi service.yaml
 # 파일을 열어 위의 내용을 복사 붙여넣기 합니다.
@@ -192,7 +193,7 @@ kubectl get service
 # PORT 80:<PORT> 숫자 확인
 curl -X GET $(minikube ip):<PORT>
 # 이렇게 서비스를 통해서 클러스터 외부에서도 정상적으로 pod 에 접속할 수 있는 것을 확인합니다.
-$(minikube ip) 시스템에 정의 되어 있음.
+$(minikube ip) 시스템에 정의 되어 있음 
 ```
 
 ## PVC
