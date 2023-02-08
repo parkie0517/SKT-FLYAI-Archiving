@@ -100,3 +100,43 @@ $ kubectl describe pod counter
 kubectl logs <pod-name> {-f} # f옵션 : 로그를 계속 보여줌.
 kubectl logs <pod-name> -c <container-name> {-f}
 ```
+
+## [Pod](https://seongjin.me/kubernetes-pods)
+- 파드(Pod)는 `1개 이상의 컨테이너가 캡슐화` 되어 클러스터 안에서 배포되는 가장 작은 단위의 객체
+ 
+# 용량 늘리기
+- [참고 링크1](https://www.nucleiotechnologies.com/increasing-disk-space-on-file-system-root-ubuntu-20-04)
+- [참고 링크2](https://hiseon.me/linux/ubuntu/modify-partition-size)
+- Hyper-V로 디스크 용량 늘려주고 
+-`sudo apt-get update && sudo apt-get install gparted` 설치 후 파티션 조정
+## Deployment 실습
+https://visionhong.tistory.com/41
+
+
+```
+apiVersion: apps/v1 # kubernetes resource 의 API Version
+kind: Deployment # kubernetes resource name
+metadata: # 메타데이터 : name, namespace, labels, annotations 등을 포함
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec: # 메인 파트 : resource 의 desired state 를 명시
+  replicas: 3 # 동일한 template 의 pod 을 3 개 복제본으로 생성
+  selector:
+    matchLabels:
+      app: nginx
+  template: # Pod 의 template
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx # container 의 이름
+        image: nginx:1.14.2 # container 의 image
+        ports:
+        - containerPort: 80 # container 의 내부 Port
+```
+pod는 `외부 노출 x`
+- kubectl get pod -o wide 더 많은 내용 출력
+- minikube ssh 쿠버네틱스 내부로 들어가기
+- curl -X GET 172.17.0.4 -vvv
