@@ -97,4 +97,34 @@ git log
 ![image](https://user-images.githubusercontent.com/80855939/217467859-5e031dd8-50df-4352-9a7d-4996e1c1be56.png)
 
 
+# git 원격 연동
+
+## git 토큰 생성
+
+github 로그인후 세팅 ->  Developer settings -> Personal access tokens (classic) -> 하기와 같이 입력후 생
+
+![image](https://user-images.githubusercontent.com/80855939/217472425-b85e5131-56d1-4803-a332-a89f65dc6f9c.png)
+
+* 메모장에 저장, 같은 토큰 재생성 불가
+
+![image](https://user-images.githubusercontent.com/80855939/217472016-50119b5f-fc8f-4e9b-85d6-8f5f0ec96a3d.png)
+
+## git 토큰 윈도우 연동
+
+윈도우 -> 자격증명관리자 실행 -> Windows 자격 증명 -> 일반 자격 증명 추가
+
+![image](https://user-images.githubusercontent.com/80855939/217473780-8b482c7f-cef1-4325-a5f4-bae2114ef591.png)
+
+![image](https://user-images.githubusercontent.com/80855939/217474124-3d8fab72-58c7-4168-bb5c-02af7e540f73.png)
+
+
+## git repo - vs code 연동
+
+1. git-practice으로 repo 생성
+
+2. 생성된 레포에서 생성된 코드 vs code에 입력
+
+![image](https://user-images.githubusercontent.com/80855939/217474917-3192068a-9c3d-472f-b4b3-d077a8c463aa.png)
+![image](https://user-images.githubusercontent.com/80855939/217474973-6b51a76a-f83a-428d-bb30-96dbe4ccffb3.png)
+
 
