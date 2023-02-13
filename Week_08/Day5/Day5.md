@@ -69,7 +69,18 @@ https://grafana.com/grafana/dashboards/
 
 
 ## ****4. MLflow****
+MLflow란 머신러닝 모델의 실험을 tracking하고, 모델을 공유 및 배포할 수 있도록 지원하는 라이브러리다.  
+즉, 머신러닝 학습과 관련된 전반적인 cycle을 지원해주는 라이브러리이다.  
 
+### 기능
+1. MLflow Tracking
+- 머신러닝 모델을 학습시킬 때 생기는 각종 파라미터, 그리고 머신러닝 모델 트레이닝이 끝난 후 metric의 결과 등을 로깅하고 그 기록 결과를 웹 UI로도 확인할 수 있다.
+2. MLflow Projects
+- Anaconda나 Docker 등을 사용하여 만들어 둔 모델을 reproducible 하고 실행할 수 있도록 코드 패키지 형식으로 지원해준다. 이러한 형식으로 만드렁진 환경을 재사용할 수 있다.
+3. MLflow Models
+- 동일한 모델을 Docker, Apache Spark, AWS 등에서 쉽게 배치할 수 있도록 지원한다.
+4. MLflow Model Registry
+- MLflow 모델의 전체 라이프 사이클을 공통으로 관리하기 위한 centralized model store, set of API, UI
 
 ### 실습
 [MLflow_실습_1.pdf](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/files/10719591/MLflow_._1.pdf)  
