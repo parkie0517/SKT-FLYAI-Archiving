@@ -21,7 +21,7 @@
   - 원래 허드슨 프로젝트에서 Java로 개발되었고, 허드슨의 개발은 2004년 여름 썬 마이크로 시스템즈에서 시작되었다. 그리고 2005년 2월에 java.net에 처음 출시되었다. 오라클과의 분쟁으로 허드슨으로부터 분기 후 2011년 2월 2일 Jenkins로 출시되었다.
   - 젠킨스와 같은 CI툴이 등장하기 전에는 일정 시간마다 빌드를 실행하는 방식이 일반적이었다. 특히 개발자들이 당일 작성한 소스들의 커밋이 모드 끝난 심야 시간대에 이러한 빌드가 타이머에 의해 집중적으로 진행되었는데, 이를 nightly-build라 한다. 하지만, 젠킨스는 정기 적인 빌드에서 한발 나아가 서브버전, Git 과 같은 버전관리시스템과 연동하여 소스의 커밋을 감지하면 자동적으로 자동화 테스트가 포함된 빌드가 작동되도록 설정할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b273691f-3f5d-427f-929c-897770b685d6/Untitled.png)
+![1](https://user-images.githubusercontent.com/53481614/218345677-efd53abf-84bd-40db-9df5-42d15254199b.jpg)
 
 - 젠킨스가 주는 이점
   - 개발중인 프로젝트에서 커밋은 매우 빈번히 일어나기 때문에 커밋 횟수만큼 빌드를 실행하는 것이 아니라 작업이 큐잉되어 자신이 실행될 차례를 기다리게 된다코드의 변경과 함께 이뤄지는 이 같은 자동화된 빌드와 테스트 작업들은 다음과 같은 이점들을 가져다 준다.
@@ -32,7 +32,8 @@
     - 결합 테스트 환경에 대한 배포작업
   - 이 외에도 젠킨스는 1400여가지가 넘는 플러그인을 온라인으로 간단히 인스톨 할 수 있는 기능을 제공하고 있으며 파이썬과 같은 스크립트를 이용해 손쉽게 자신에게 필요한 기능을 추가 할 수도 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/abe85b16-055e-48eb-9c67-cda9cfdc45e4/Untitled.png)
+![2](https://user-images.githubusercontent.com/53481614/218345755-e03ffcd8-28ca-4837-b373-b3e38a842afb.jpg)
+
 
 - 각종 배치 작업의 간략화
 
@@ -142,12 +143,12 @@ sudo apt install jenkins
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c95d329f-6f1d-4b33-a821-ef0cd544d641/Untitled.png)
+![3](https://user-images.githubusercontent.com/53481614/218345781-42a0b1b9-39d5-4316-a428-ff7076b9ef93.jpg)
 
 - 우분투 Firefox에서 [localhost:8080](http://localhost:8080) 입력 후  패스워드 입력
 - 플러그인 설
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c97551e3-159a-4d35-91ad-4d2d3ce2bafc/Untitled.png)
+![4](https://user-images.githubusercontent.com/53481614/218345816-dd178fff-c568-47b8-8d8c-94fa288b3b16.jpg)
 
 - 계정 만들기
   - id : admin_user
@@ -236,14 +237,14 @@ git push origin
 
 - create a job 선택
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/25c020c0-9097-4a4b-a3ea-4224b6fee70f/Untitled.png)
+![5](https://user-images.githubusercontent.com/53481614/218345841-b71234a7-cb25-46ce-9e08-f5f2725359b0.jpg)
 
 - 지금 빌드
   - 오류발생
   - 오류 해결 : Branches to build를 master에서 main으로 변경
 - 지금빌드
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dc112951-37a2-4146-8292-79d13eb9073b/Untitled.png)
+![6](https://user-images.githubusercontent.com/53481614/218345848-018da1e8-c2d5-4451-ad49-eb49589d896c.jpg)
 
 - Jenkinsfile 코드 수정
 
@@ -464,11 +465,11 @@ pipeline {
   }
   ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/894e397e-c43e-4f93-859b-f048d6e72b00/Untitled.png)
+![7](https://user-images.githubusercontent.com/53481614/218345877-6039010f-f158-488c-bc72-28c4c93c0691.jpg)
 
 - Jenkins 플러그인 중 Credentials Plugin 확인
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3e6b24a9-7a47-4a56-846e-42c621fac245/Untitled.png)
+![8](https://user-images.githubusercontent.com/53481614/218345881-567645f8-d22c-4407-9711-44d3656bc6e0.jpg)
 
 - https://javadoc.jenkins-ci.org/plugin/credentials-binding/index.html?org/jenkinsci/plugins/credentialsbinding/impl/UsernamePasswordMultiBinding.DescriptorImpl.html
 
@@ -653,7 +654,7 @@ pipeline {
   - testApp에 echo ‘Replay’를 추가 후 다시 빌드
   - script 확인
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2bfad27a-ab5c-4e62-8cb8-a74820edf94a/Untitled.png)
+![9](https://user-images.githubusercontent.com/53481614/218345903-3f9a3437-b8ff-4dbe-9e8c-3efa4ab2adad.jpg)
 
 # 파이썬 기반 Jenkins CI Pipeline 생성 실습
 
