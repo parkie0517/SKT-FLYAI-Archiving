@@ -15,7 +15,7 @@
 - Research와 Production의 머신러닝
 
 ![image](https://user-images.githubusercontent.com/79077316/218382705-3acb6b97-626b-4444-9a3b-a8665f60173e.png)
-0
+
 
 ## 2. MS Azure Machine Learning
 
