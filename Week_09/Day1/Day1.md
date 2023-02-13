@@ -22,7 +22,7 @@
 - `Azure Machine Learning` 머신러닝 워크스페이스 만들기
 ![image](https://user-images.githubusercontent.com/79077316/218382996-1a59df2a-0005-4f62-ad00-9789a2c0ad48.png)
 
-- `Azure Machine Learning Studio` ****에서 compute instance 만들기
+- `Azure Machine Learning Studio` 에서 compute instance 만들기
 ![image](https://user-images.githubusercontent.com/79077316/218383033-7b76d649-3ead-4426-9df2-97dc03804f21.png)
 
 - `Automated ML` 에서 new job 만들기
