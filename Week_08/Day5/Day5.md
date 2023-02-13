@@ -1,11 +1,11 @@
-## ****Github Actions 기반 CI/CD - Build와 Push****
+## ****1. Github Actions 기반 CI/CD - Build와 Push****
 
 ### 실습
 [Github_Actions_기반_CICD_-_Build_와_Push.pdf](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/files/10719559/Github_Actions_._CICD_-_Build_._Push.pdf)
 
 
-## ****Prometheus_Grafana****
-### 1. Prometheus   
+## ****2. Prometheus_Grafana****
+### 1). Prometheus   
 https://github.com/prometheus
 
 Prometheus는 이벤트 모니터링 및 알림에 사용되는 자유 소프트웨어 응용 프로그램이다.
@@ -34,7 +34,7 @@ https://prometheus.io/docs/prometheus/latest/querying/basics/
 - ⇒ Thanos 라는 오픈소스를 활용해 multi prometheus server 를 운영  
 https://thanos.io/
 
-### 2. Grafana  
+### 2). Grafana  
 https://prometheus.io/docs/prometheus/latest/querying/basics/  
 Grafana는 개방적이고 구성 가능한 관찰 및 데이터 시각화 플랫폼입니다.
 - 2014 년 릴리즈된 프로젝트로 처음에는 InfluxDB, Prometheus 와 같은 TimeSeriesDB 전용 시각화 툴로 개발되었으나 이후 MySQL, PostgreSQL 과 같은 RDB 도 지원
@@ -47,7 +47,7 @@ https://play.grafana.org/
 ### 실습
 [Prometheus__Grafana_실습.pdf](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/files/10719580/Prometheus__Grafana_.pdf)
 
-## ****DVC( Data version control )****
+## ****3. DVC( Data version control )****
 
 데이터의 버전을 관리해주는 
 
@@ -67,7 +67,7 @@ https://grafana.com/grafana/dashboards/
 [DVC_실습.pdf](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/files/10719584/DVC_.pdf)
 
 
-## ****MLflow****
+## ****4. MLflow****
 
 
 ### 실습
