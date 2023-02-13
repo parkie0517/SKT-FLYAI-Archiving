@@ -165,27 +165,27 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
     - any, none, label, node, docker, dockerfile, kubernetes
     - agent 가 none 인 경우 stage 에 포함시켜야 함
 
-    ```yaml
-    pipeline {
-    	agent none
-    	stages {
-    		stage('Example Build') {
-    			agent { docker 'maven:3-alpine' }
-    			steps {
-    				echo 'Hello, Maven'
-    				sh 'mvn --version'
-    			}
-    		}
-    		stage('Example Test') {
-    			agent { docker 'openjdk:8-jre' }
-    			steps {
-    				echo 'Hello, JDK'
-    				sh 'java -version'
-    			}
-    		}
-    	}
-    }
-    ```
+```yaml
+pipeline {
+   agent none
+   stages {
+      stage('Example Build') {
+         agent { docker 'maven:3-alpine' }
+         steps {
+            echo 'Hello, Maven'
+            sh 'mvn --version'
+         }
+      }
+      stage('Example Test') {
+         agent { docker 'openjdk:8-jre' }
+         steps {
+            echo 'Hello, JDK'
+            sh 'java -version'
+         }
+      }
+   }
+}
+```
 
 - stages : 어떤 일들을 처리할 건지 일련의 stage를 정의(카테고리)
 
