@@ -49,7 +49,8 @@ https://play.grafana.org/
 
 ## ****3. DVC( Data version control )****
 
-데이터의 버전을 관리해주는 
+DVC는 Data Version Control 의 약자로, 머신러닝 프로젝트에서 모델과 데이터의 버전 관리를 위한 오픈 소스이다.  
+머신러닝 파이프라인에서 데이터나 데이터 처리 방식, 모델 등이 바뀌는 일이 빈번하게 발생하는데, 이 과정에서 모델에 문제가 발생하게 되면 이전 버전의 모델을 가져와야 하는데, 이러한 작업을 효율적으로 할 수 있도록 버전 관리를 도와주는 도구가 DVC이다.  
 
 - 대부분의 스토리지와 호환된다 ( amazon s3, google drive, … )
 - GitHub 외의 GitLab, Bitbucket 등의 대부분의 git 호스팅 서버와 연동된다
