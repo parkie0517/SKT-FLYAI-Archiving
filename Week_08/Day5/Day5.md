@@ -35,7 +35,7 @@ https://prometheus.io/docs/prometheus/latest/querying/basics/
 https://thanos.io/
 
 ### 2. Grafana  
-https://prometheus.io/docs/prometheus/latest/querying/basics/
+https://prometheus.io/docs/prometheus/latest/querying/basics/  
 Grafana는 개방적이고 구성 가능한 관찰 및 데이터 시각화 플랫폼입니다.
 - 2014 년 릴리즈된 프로젝트로 처음에는 InfluxDB, Prometheus 와 같은 TimeSeriesDB 전용 시각화 툴로 개발되었으나 이후 MySQL, PostgreSQL 과 같은 RDB 도 지원
 - 현재는 Grafana Labs 회사에서 관리하고 있으며, 실습을 진행할 Open Source Project 인 Grafana 외에도 상용 서비스인 Grafana Cloud, Grafana Enterprise 제품 존재
