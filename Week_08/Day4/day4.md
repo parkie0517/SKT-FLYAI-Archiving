@@ -244,7 +244,7 @@ git push origin
   - 오류 해결 : Branches to build를 master에서 main으로 변경
 - 지금빌드
 
-![8](https://user-images.githubusercontent.com/53481614/218346119-2466e112-ed9e-471f-8b18-5b7ba198e684.jpg)
+![8](https://user-images.githubusercontent.com/53481614/218348555-f8009dba-aca3-4d10-a0b1-8b2cf16e36d7.jpg)
 
 - Jenkinsfile 코드 수정
 
@@ -309,35 +309,35 @@ git push origin
 
 ```yaml
 pipeline {
-	agent any
-	stages {
-		stage("build") {
-			steps {
-				echo 'building the applicaiton...'
-			}
-		}
-		stage("test") {
-			steps {
-				echo 'testing the applicaiton...'
-			}
-		}
-		stage("deploy") {
-			steps {
-				echo 'deploying the applicaiton...'
-			}
-		}
-	}
-	post {
-		always {
-			echo 'building..'
-		}
-		success {
-			echo 'success'
-		}
-		failure {
-			echo 'failure'
-		}
-	}
+   agent any
+   stages {
+      stage("build") {
+         steps {
+            echo 'building the applicaiton...'
+         }
+      }
+      stage("test") {
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+         }
+      }
+   }
+   post {
+      always {
+         echo 'building..'
+      }
+      success {
+         echo 'success'
+      }
+      failure {
+         echo 'failure'
+      }
+   }
 }
 ```
 
@@ -360,34 +360,34 @@ git push origin main
 
 ```yaml
 pipeline {
-	agent any
-	stages {
-		stage("build") {
-			when {
-				expression {
-					env.GIT_BRANCH == 'origin/main'
-				}
-			}
-			steps {
-				echo 'building the applicaiton...'
-			}
-		}
-		stage("test") {
-			when {
-				expression {
-					env.GIT_BRANCH == 'origin/test' || env.GIT_BRANCH == ''
-				}
-			}
-			steps {
-				echo 'testing the applicaiton...'
-			}
-		}
-		stage("deploy") {
-			steps {
-				echo 'deploying the applicaiton...'
-			}
-		}
-	}
+   agent any
+   stages {
+      stage("build") {
+         when {
+            expression {
+               env.GIT_BRANCH == 'origin/main'
+            }
+         }
+         steps {
+            echo 'building the applicaiton...'
+         }
+      }
+      stage("test") {
+         when {
+            expression {
+               env.GIT_BRANCH == 'origin/test' || env.GIT_BRANCH == ''
+            }
+         }
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+         }
+      }
+   }
 }
 ```
 
@@ -401,32 +401,32 @@ pipeline {
 
     - echo 사용 시 큰 따옴표 주의
 
-    ```yaml
-    pipeline {
-    	agent any
-    	environment {
-    		NEW_VERSION = '1.0.0'
-    	}
-    	stages {
-    		stage("build") {
-    			steps {
-    				echo 'building the applicaiton...'
-    				echo "building version ${NEW_VERSION}"
-    			}
-    		}
-    		stage("test") {
-    			steps {
-    				echo 'testing the applicaiton...'
-    			}
-    		}
-    		stage("deploy") {
-    			steps {
-    				echo 'deploying the applicaiton...'
-    			}
-    		}
-    	}
-    }
-    ```
+```yaml
+pipeline {
+   agent any
+   environment {
+      NEW_VERSION = '1.0.0'
+   }
+   stages {
+      stage("build") {
+         steps {
+            echo 'building the applicaiton...'
+            echo "building version ${NEW_VERSION}"
+         }
+      }
+      stage("test") {
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+         }
+      }
+   }
+}
+```
 
 - Credentials 자격 증명 환경 변수로 사용하기
 
@@ -435,35 +435,35 @@ pipeline {
     - Username : admin_user / Password : 1234 / ID : admin_user_credentials
   - Jenkinsfile 에서 환경변수로 사용
 
-  ```yaml
-  pipeline {
-  	agent any
-  	environment {
-  		NEW_VERSION = '1.0.0'
-  		ADMIN_CREDENTIALS = credentials('admin_user_credentials')
-  	}
-  	stages {
-  		stage("build") {
-  			steps {
-  				echo 'building the applicaiton...'
-  				echo "building version ${NEW_VERSION}"
-  			}
-  		}
-  		stage("test") {
-  			steps {
-  				echo 'testing the applicaiton...'
-  			}
-  		}
-  		stage("deploy") {
-  			steps {
-  				echo 'deploying the applicaiton...'
-  				echo "deploying with ${ADMIN_CREDENTIALS}"
-  				sh 'printf ${ADMIN_CREDENTIALS}'
-  			}
-  		}
-  	}
-  }
-  ```
+```yaml
+pipeline {
+   agent any
+   environment {
+      NEW_VERSION = '1.0.0'
+      ADMIN_CREDENTIALS = credentials('admin_user_credentials')
+   }
+   stages {
+      stage("build") {
+         steps {
+            echo 'building the applicaiton...'
+            echo "building version ${NEW_VERSION}"
+         }
+      }
+      stage("test") {
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+            echo "deploying with ${ADMIN_CREDENTIALS}"
+            sh 'printf ${ADMIN_CREDENTIALS}'
+         }
+      }
+   }
+}
+```
 
 ![9](https://user-images.githubusercontent.com/53481614/218346141-a04df57b-b616-47dd-a810-ad6382ffec21.jpg)
 
@@ -475,35 +475,35 @@ pipeline {
 
 ```yaml
 pipeline {
-	agent any
-	environment {
-		NEW_VERSION = '1.0.0'
-	}
-	stages {
-		stage("build") {
-			steps {
-				echo 'building the applicaiton...'
-				echo "building version ${NEW_VERSION}"
-			}
-		}
-		stage("test") {
-			steps {
-				echo 'testing the applicaiton...'
-			}
-		}
-		stage("deploy") {
-			steps {
-				echo 'deploying the applicaiton...'
-				withCredentials([[$class: 'UsernamePasswordMultiBinding',
-					credentialsId: 'admin_user_credentials',
-					usernameVariable: 'USER',
-					passwordVariable: 'PWD'
-				]]) {
-					sh 'printf ${USER}'
-				}
-			}
-		}
-	}
+   agent any
+   environment {
+      NEW_VERSION = '1.0.0'
+   }
+   stages {
+      stage("build") {
+         steps {
+            echo 'building the applicaiton...'
+            echo "building version ${NEW_VERSION}"
+         }
+      }
+      stage("test") {
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+            withCredentials([[$class: 'UsernamePasswordMultiBinding',
+               credentialsId: 'admin_user_credentials',
+               usernameVariable: 'USER',
+               passwordVariable: 'PWD'
+	    ]]) {
+               sh 'printf ${USER}'
+            }
+         }
+      }
+   }
 }
 ```
 
@@ -549,38 +549,38 @@ pipeline {
     - execute Tests 선택 해제
   - test stage를 건너뛰고 실행되는지 확인
 
-  ```yaml
-  pipeline {
-  	agent any
-  	parameters {
-  		choice(name: 'VERSION', choices: ['1.1.0','1.2.0','1.3.0'], description: '')
-  		booleanParam(name: 'executeTests', defaultValue: true, description: '')
-  	}
-  	stages {
-  		stage("build") {
-  			steps {
-  				echo 'building the applicaiton...'
-  			}
-  		}
-  		stage("test") {
-  			when {
-  				expression {
-  					params.executeTests
-  				}
-  			}
-  			steps {
-  				echo 'testing the applicaiton...'
-  			}
-  		}
-  		stage("deploy") {
-  			steps {
-  				echo 'deploying the applicaiton...'
-  				echo "deploying version ${params.VERSION}"
-  			}
-  		}
-  	}
-  }
-  ```
+```yaml
+pipeline {
+   agent any
+   parameters {
+      choice(name: 'VERSION', choices: ['1.1.0','1.2.0','1.3.0'], description: '')
+      booleanParam(name: 'executeTests', defaultValue: true, description: '')
+   }
+   stages {
+      stage("build") {
+         steps {
+            echo 'building the applicaiton...'
+         }
+      }
+      stage("test") {
+         when {
+            expression {
+               params.executeTests
+            }
+         }
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+            echo "deploying version ${params.VERSION}"
+         }
+      }
+   }
+}
+```
 
 - script.groovy 파일 생성
 
