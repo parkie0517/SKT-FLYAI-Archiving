@@ -80,8 +80,8 @@
   	}
   }
   ```
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fa8f0951-4a31-4c44-a6ad-1e0fded7f3d8/Untitled.png)
+  
+![3](https://user-images.githubusercontent.com/53481614/218346024-cd8cdadf-300e-455c-904f-713b8594111c.jpg)
 
 - Declarative Pipeline (선언적 파이프라인)
 
@@ -124,7 +124,7 @@ sudo systemctl status jenkins
 
 - 설치시 에러 발생
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b1f48ec4-6962-403b-9969-bf416a9f570a/Untitled.png)
+![4](https://user-images.githubusercontent.com/53481614/218346046-71c67c17-450a-4773-9698-cdd2575b20dd.jpg)
 
 - 해결방안
 
@@ -143,12 +143,12 @@ sudo apt install jenkins
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-![3](https://user-images.githubusercontent.com/53481614/218345781-42a0b1b9-39d5-4316-a428-ff7076b9ef93.jpg)
+![5](https://user-images.githubusercontent.com/53481614/218346074-00a2978b-4d23-4694-8d5a-9472ea236b9c.jpg)
 
 - 우분투 Firefox에서 [localhost:8080](http://localhost:8080) 입력 후  패스워드 입력
 - 플러그인 설
 
-![4](https://user-images.githubusercontent.com/53481614/218345816-dd178fff-c568-47b8-8d8c-94fa288b3b16.jpg)
+![6](https://user-images.githubusercontent.com/53481614/218346093-bc9cd387-6d8e-45fc-a9ee-17da1e4b3837.jpg)
 
 - 계정 만들기
   - id : admin_user
@@ -237,14 +237,14 @@ git push origin
 
 - create a job 선택
 
-![5](https://user-images.githubusercontent.com/53481614/218345841-b71234a7-cb25-46ce-9e08-f5f2725359b0.jpg)
+![7](https://user-images.githubusercontent.com/53481614/218346110-f32e15b6-8150-43b3-8af1-67c6bfe5d098.jpg)
 
 - 지금 빌드
   - 오류발생
   - 오류 해결 : Branches to build를 master에서 main으로 변경
 - 지금빌드
 
-![6](https://user-images.githubusercontent.com/53481614/218345848-018da1e8-c2d5-4451-ad49-eb49589d896c.jpg)
+![8](https://user-images.githubusercontent.com/53481614/218346119-2466e112-ed9e-471f-8b18-5b7ba198e684.jpg)
 
 - Jenkinsfile 코드 수정
 
@@ -465,7 +465,7 @@ pipeline {
   }
   ```
 
-![7](https://user-images.githubusercontent.com/53481614/218345877-6039010f-f158-488c-bc72-28c4c93c0691.jpg)
+![9](https://user-images.githubusercontent.com/53481614/218346141-a04df57b-b616-47dd-a810-ad6382ffec21.jpg)
 
 - Jenkins 플러그인 중 Credentials Plugin 확인
 
