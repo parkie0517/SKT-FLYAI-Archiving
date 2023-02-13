@@ -5,7 +5,7 @@
 
 
 ## ****Prometheus_Grafana****
-### 1. Prometheus  
+### 1. Prometheus   
 https://github.com/prometheus
 
 Prometheus는 이벤트 모니터링 및 알림에 사용되는 자유 소프트웨어 응용 프로그램이다.
@@ -31,18 +31,19 @@ https://prometheus.io/docs/prometheus/latest/querying/basics/
 #### 단점
 - Scalability, High Availability
   - Prometheus Sever 가 Single node 로 운영되어야 하기 때문에 발생하는 문제
-- ⇒ Thanos 라는 오픈소스를 활용해 multi prometheus server 를 운영
+- ⇒ Thanos 라는 오픈소스를 활용해 multi prometheus server 를 운영  
 https://thanos.io/
 
-### 2. Grafana
+### 2. Grafana  
 https://prometheus.io/docs/prometheus/latest/querying/basics/
 Grafana는 개방적이고 구성 가능한 관찰 및 데이터 시각화 플랫폼입니다.
 - 2014 년 릴리즈된 프로젝트로 처음에는 InfluxDB, Prometheus 와 같은 TimeSeriesDB 전용 시각화 툴로 개발되었으나 이후 MySQL, PostgreSQL 과 같은 RDB 도 지원
 - 현재는 Grafana Labs 회사에서 관리하고 있으며, 실습을 진행할 Open Source Project 인 Grafana 외에도 상용 서비스인 Grafana Cloud, Grafana Enterprise 제품 존재
   - 상용 서비스는 추가 기능을 제공하는 것뿐만 아니라 설치 및 운영 등의 기술 지원까지 포함
-- playground 페이지도 제공하여 쉽고 간편하게 Grafana Dashboard 를 사용해볼 수 있음
+- playground 페이지도 제공하여 쉽고 간편하게 Grafana Dashboard 를 사용해볼 수 있음  
 https://play.grafana.org/
 - 마찬가지로 쿠버네티스에 종속적이지는 않고 docker 로 쉽게 설치할 수는 있지만, 여러 Datasource 와의 연동성이 뛰어나고 특히 Prometheus 와의 연동이 뛰어나 함께 발전
+
 ### 실습
 [Prometheus__Grafana_실습.pdf](https://github.com/SKT-FlyAi/SKT-FLYAI-Archiving/files/10719580/Prometheus__Grafana_.pdf)
 
