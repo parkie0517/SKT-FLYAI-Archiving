@@ -37,4 +37,4 @@
 
 - `Notebooks` 에서 주피터노트북 만들기
 ![image](https://user-images.githubusercontent.com/79077316/218383167-44744417-e668-4823-ab00-51e1dbd1fdc2.png)
-
+- 자세한 노트북 Code는 본 폴더 'azure-mlops.ipynb' 확인
