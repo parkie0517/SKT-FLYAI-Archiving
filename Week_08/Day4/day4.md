@@ -21,7 +21,7 @@
   - 원래 허드슨 프로젝트에서 Java로 개발되었고, 허드슨의 개발은 2004년 여름 썬 마이크로 시스템즈에서 시작되었다. 그리고 2005년 2월에 java.net에 처음 출시되었다. 오라클과의 분쟁으로 허드슨으로부터 분기 후 2011년 2월 2일 Jenkins로 출시되었다.
   - 젠킨스와 같은 CI툴이 등장하기 전에는 일정 시간마다 빌드를 실행하는 방식이 일반적이었다. 특히 개발자들이 당일 작성한 소스들의 커밋이 모드 끝난 심야 시간대에 이러한 빌드가 타이머에 의해 집중적으로 진행되었는데, 이를 nightly-build라 한다. 하지만, 젠킨스는 정기 적인 빌드에서 한발 나아가 서브버전, Git 과 같은 버전관리시스템과 연동하여 소스의 커밋을 감지하면 자동적으로 자동화 테스트가 포함된 빌드가 작동되도록 설정할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b273691f-3f5d-427f-929c-897770b685d6/Untitled.png)
+![1](https://user-images.githubusercontent.com/53481614/218345677-efd53abf-84bd-40db-9df5-42d15254199b.jpg)
 
 - 젠킨스가 주는 이점
   - 개발중인 프로젝트에서 커밋은 매우 빈번히 일어나기 때문에 커밋 횟수만큼 빌드를 실행하는 것이 아니라 작업이 큐잉되어 자신이 실행될 차례를 기다리게 된다코드의 변경과 함께 이뤄지는 이 같은 자동화된 빌드와 테스트 작업들은 다음과 같은 이점들을 가져다 준다.
@@ -32,7 +32,8 @@
     - 결합 테스트 환경에 대한 배포작업
   - 이 외에도 젠킨스는 1400여가지가 넘는 플러그인을 온라인으로 간단히 인스톨 할 수 있는 기능을 제공하고 있으며 파이썬과 같은 스크립트를 이용해 손쉽게 자신에게 필요한 기능을 추가 할 수도 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/abe85b16-055e-48eb-9c67-cda9cfdc45e4/Untitled.png)
+![2](https://user-images.githubusercontent.com/53481614/218345755-e03ffcd8-28ca-4837-b373-b3e38a842afb.jpg)
+
 
 - 각종 배치 작업의 간략화
 
@@ -79,8 +80,8 @@
   	}
   }
   ```
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fa8f0951-4a31-4c44-a6ad-1e0fded7f3d8/Untitled.png)
+  
+![3](https://user-images.githubusercontent.com/53481614/218346024-cd8cdadf-300e-455c-904f-713b8594111c.jpg)
 
 - Declarative Pipeline (선언적 파이프라인)
 
@@ -123,7 +124,7 @@ sudo systemctl status jenkins
 
 - 설치시 에러 발생
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b1f48ec4-6962-403b-9969-bf416a9f570a/Untitled.png)
+![4](https://user-images.githubusercontent.com/53481614/218346046-71c67c17-450a-4773-9698-cdd2575b20dd.jpg)
 
 - 해결방안
 
@@ -142,12 +143,12 @@ sudo apt install jenkins
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c95d329f-6f1d-4b33-a821-ef0cd544d641/Untitled.png)
+![5](https://user-images.githubusercontent.com/53481614/218346074-00a2978b-4d23-4694-8d5a-9472ea236b9c.jpg)
 
 - 우분투 Firefox에서 [localhost:8080](http://localhost:8080) 입력 후  패스워드 입력
 - 플러그인 설
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c97551e3-159a-4d35-91ad-4d2d3ce2bafc/Untitled.png)
+![6](https://user-images.githubusercontent.com/53481614/218346093-bc9cd387-6d8e-45fc-a9ee-17da1e4b3837.jpg)
 
 - 계정 만들기
   - id : admin_user
@@ -164,27 +165,27 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
     - any, none, label, node, docker, dockerfile, kubernetes
     - agent 가 none 인 경우 stage 에 포함시켜야 함
 
-    ```yaml
-    pipeline {
-    	agent none
-    	stages {
-    		stage('Example Build') {
-    			agent { docker 'maven:3-alpine' }
-    			steps {
-    				echo 'Hello, Maven'
-    				sh 'mvn --version'
-    			}
-    		}
-    		stage('Example Test') {
-    			agent { docker 'openjdk:8-jre' }
-    			steps {
-    				echo 'Hello, JDK'
-    				sh 'java -version'
-    			}
-    		}
-    	}
-    }
-    ```
+```yaml
+pipeline {
+   agent none
+   stages {
+      stage('Example Build') {
+         agent { docker 'maven:3-alpine' }
+         steps {
+            echo 'Hello, Maven'
+            sh 'mvn --version'
+         }
+      }
+      stage('Example Test') {
+         agent { docker 'openjdk:8-jre' }
+         steps {
+            echo 'Hello, JDK'
+            sh 'java -version'
+         }
+      }
+   }
+}
+```
 
 - stages : 어떤 일들을 처리할 건지 일련의 stage를 정의(카테고리)
 
@@ -236,14 +237,14 @@ git push origin
 
 - create a job 선택
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/25c020c0-9097-4a4b-a3ea-4224b6fee70f/Untitled.png)
+![7](https://user-images.githubusercontent.com/53481614/218346110-f32e15b6-8150-43b3-8af1-67c6bfe5d098.jpg)
 
 - 지금 빌드
   - 오류발생
   - 오류 해결 : Branches to build를 master에서 main으로 변경
 - 지금빌드
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dc112951-37a2-4146-8292-79d13eb9073b/Untitled.png)
+![8](https://user-images.githubusercontent.com/53481614/218348555-f8009dba-aca3-4d10-a0b1-8b2cf16e36d7.jpg)
 
 - Jenkinsfile 코드 수정
 
@@ -308,35 +309,35 @@ git push origin
 
 ```yaml
 pipeline {
-	agent any
-	stages {
-		stage("build") {
-			steps {
-				echo 'building the applicaiton...'
-			}
-		}
-		stage("test") {
-			steps {
-				echo 'testing the applicaiton...'
-			}
-		}
-		stage("deploy") {
-			steps {
-				echo 'deploying the applicaiton...'
-			}
-		}
-	}
-	post {
-		always {
-			echo 'building..'
-		}
-		success {
-			echo 'success'
-		}
-		failure {
-			echo 'failure'
-		}
-	}
+   agent any
+   stages {
+      stage("build") {
+         steps {
+            echo 'building the applicaiton...'
+         }
+      }
+      stage("test") {
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+         }
+      }
+   }
+   post {
+      always {
+         echo 'building..'
+      }
+      success {
+         echo 'success'
+      }
+      failure {
+         echo 'failure'
+      }
+   }
 }
 ```
 
@@ -359,34 +360,34 @@ git push origin main
 
 ```yaml
 pipeline {
-	agent any
-	stages {
-		stage("build") {
-			when {
-				expression {
-					env.GIT_BRANCH == 'origin/main'
-				}
-			}
-			steps {
-				echo 'building the applicaiton...'
-			}
-		}
-		stage("test") {
-			when {
-				expression {
-					env.GIT_BRANCH == 'origin/test' || env.GIT_BRANCH == ''
-				}
-			}
-			steps {
-				echo 'testing the applicaiton...'
-			}
-		}
-		stage("deploy") {
-			steps {
-				echo 'deploying the applicaiton...'
-			}
-		}
-	}
+   agent any
+   stages {
+      stage("build") {
+         when {
+            expression {
+               env.GIT_BRANCH == 'origin/main'
+            }
+         }
+         steps {
+            echo 'building the applicaiton...'
+         }
+      }
+      stage("test") {
+         when {
+            expression {
+               env.GIT_BRANCH == 'origin/test' || env.GIT_BRANCH == ''
+            }
+         }
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+         }
+      }
+   }
 }
 ```
 
@@ -400,32 +401,32 @@ pipeline {
 
     - echo 사용 시 큰 따옴표 주의
 
-    ```yaml
-    pipeline {
-    	agent any
-    	environment {
-    		NEW_VERSION = '1.0.0'
-    	}
-    	stages {
-    		stage("build") {
-    			steps {
-    				echo 'building the applicaiton...'
-    				echo "building version ${NEW_VERSION}"
-    			}
-    		}
-    		stage("test") {
-    			steps {
-    				echo 'testing the applicaiton...'
-    			}
-    		}
-    		stage("deploy") {
-    			steps {
-    				echo 'deploying the applicaiton...'
-    			}
-    		}
-    	}
-    }
-    ```
+```yaml
+pipeline {
+   agent any
+   environment {
+      NEW_VERSION = '1.0.0'
+   }
+   stages {
+      stage("build") {
+         steps {
+            echo 'building the applicaiton...'
+            echo "building version ${NEW_VERSION}"
+         }
+      }
+      stage("test") {
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+         }
+      }
+   }
+}
+```
 
 - Credentials 자격 증명 환경 변수로 사용하기
 
@@ -434,75 +435,75 @@ pipeline {
     - Username : admin_user / Password : 1234 / ID : admin_user_credentials
   - Jenkinsfile 에서 환경변수로 사용
 
-  ```yaml
-  pipeline {
-  	agent any
-  	environment {
-  		NEW_VERSION = '1.0.0'
-  		ADMIN_CREDENTIALS = credentials('admin_user_credentials')
-  	}
-  	stages {
-  		stage("build") {
-  			steps {
-  				echo 'building the applicaiton...'
-  				echo "building version ${NEW_VERSION}"
-  			}
-  		}
-  		stage("test") {
-  			steps {
-  				echo 'testing the applicaiton...'
-  			}
-  		}
-  		stage("deploy") {
-  			steps {
-  				echo 'deploying the applicaiton...'
-  				echo "deploying with ${ADMIN_CREDENTIALS}"
-  				sh 'printf ${ADMIN_CREDENTIALS}'
-  			}
-  		}
-  	}
-  }
-  ```
+```yaml
+pipeline {
+   agent any
+   environment {
+      NEW_VERSION = '1.0.0'
+      ADMIN_CREDENTIALS = credentials('admin_user_credentials')
+   }
+   stages {
+      stage("build") {
+         steps {
+            echo 'building the applicaiton...'
+            echo "building version ${NEW_VERSION}"
+         }
+      }
+      stage("test") {
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+            echo "deploying with ${ADMIN_CREDENTIALS}"
+            sh 'printf ${ADMIN_CREDENTIALS}'
+         }
+      }
+   }
+}
+```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/894e397e-c43e-4f93-859b-f048d6e72b00/Untitled.png)
+![9](https://user-images.githubusercontent.com/53481614/218346141-a04df57b-b616-47dd-a810-ad6382ffec21.jpg)
 
 - Jenkins 플러그인 중 Credentials Plugin 확인
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3e6b24a9-7a47-4a56-846e-42c621fac245/Untitled.png)
+![8](https://user-images.githubusercontent.com/53481614/218345881-567645f8-d22c-4407-9711-44d3656bc6e0.jpg)
 
 - https://javadoc.jenkins-ci.org/plugin/credentials-binding/index.html?org/jenkinsci/plugins/credentialsbinding/impl/UsernamePasswordMultiBinding.DescriptorImpl.html
 
 ```yaml
 pipeline {
-	agent any
-	environment {
-		NEW_VERSION = '1.0.0'
-	}
-	stages {
-		stage("build") {
-			steps {
-				echo 'building the applicaiton...'
-				echo "building version ${NEW_VERSION}"
-			}
-		}
-		stage("test") {
-			steps {
-				echo 'testing the applicaiton...'
-			}
-		}
-		stage("deploy") {
-			steps {
-				echo 'deploying the applicaiton...'
-				withCredentials([[$class: 'UsernamePasswordMultiBinding',
-					credentialsId: 'admin_user_credentials',
-					usernameVariable: 'USER',
-					passwordVariable: 'PWD'
-				]]) {
-					sh 'printf ${USER}'
-				}
-			}
-		}
-	}
+   agent any
+   environment {
+      NEW_VERSION = '1.0.0'
+   }
+   stages {
+      stage("build") {
+         steps {
+            echo 'building the applicaiton...'
+            echo "building version ${NEW_VERSION}"
+         }
+      }
+      stage("test") {
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+            withCredentials([[$class: 'UsernamePasswordMultiBinding',
+               credentialsId: 'admin_user_credentials',
+               usernameVariable: 'USER',
+               passwordVariable: 'PWD'
+	    ]]) {
+               sh 'printf ${USER}'
+            }
+         }
+      }
+   }
 }
 ```
 
@@ -548,38 +549,38 @@ pipeline {
     - execute Tests 선택 해제
   - test stage를 건너뛰고 실행되는지 확인
 
-  ```yaml
-  pipeline {
-  	agent any
-  	parameters {
-  		choice(name: 'VERSION', choices: ['1.1.0','1.2.0','1.3.0'], description: '')
-  		booleanParam(name: 'executeTests', defaultValue: true, description: '')
-  	}
-  	stages {
-  		stage("build") {
-  			steps {
-  				echo 'building the applicaiton...'
-  			}
-  		}
-  		stage("test") {
-  			when {
-  				expression {
-  					params.executeTests
-  				}
-  			}
-  			steps {
-  				echo 'testing the applicaiton...'
-  			}
-  		}
-  		stage("deploy") {
-  			steps {
-  				echo 'deploying the applicaiton...'
-  				echo "deploying version ${params.VERSION}"
-  			}
-  		}
-  	}
-  }
-  ```
+```yaml
+pipeline {
+   agent any
+   parameters {
+      choice(name: 'VERSION', choices: ['1.1.0','1.2.0','1.3.0'], description: '')
+      booleanParam(name: 'executeTests', defaultValue: true, description: '')
+   }
+   stages {
+      stage("build") {
+         steps {
+            echo 'building the applicaiton...'
+         }
+      }
+      stage("test") {
+         when {
+            expression {
+               params.executeTests
+            }
+         }
+         steps {
+            echo 'testing the applicaiton...'
+         }
+      }
+      stage("deploy") {
+         steps {
+            echo 'deploying the applicaiton...'
+            echo "deploying version ${params.VERSION}"
+         }
+      }
+   }
+}
+```
 
 - script.groovy 파일 생성
 
@@ -653,7 +654,7 @@ pipeline {
   - testApp에 echo ‘Replay’를 추가 후 다시 빌드
   - script 확인
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2bfad27a-ab5c-4e62-8cb8-a74820edf94a/Untitled.png)
+![9](https://user-images.githubusercontent.com/53481614/218345903-3f9a3437-b8ff-4dbe-9e8c-3efa4ab2adad.jpg)
 
 # 파이썬 기반 Jenkins CI Pipeline 생성 실습
 
