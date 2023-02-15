@@ -2,7 +2,8 @@
 
 
 ### [[Day 2]](./Day2)
-
+- Microsoft Cognitive Service
+- `bounding box`, `OCR`
 
 ### [[Day 3]](./Day3)
 
