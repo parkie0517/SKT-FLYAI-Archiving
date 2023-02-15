@@ -107,6 +107,7 @@ def DrawImage(result):
 image
 ```
 - 실행결과
+
 ![Untitled](https://user-images.githubusercontent.com/39786044/218895098-aab69e41-b009-40f7-83b8-3c8c3e0bdb21.png)
 
 ```python
@@ -132,5 +133,6 @@ for line in lineinfos:
 ```
 
 - 실행결과
+
 ![Untitled (1)](https://user-images.githubusercontent.com/39786044/218895241-1dc2f343-80cd-4f42-a7e9-e396f928e48d.png)
 <img width="191" alt="Untitled (2)" src="https://user-images.githubusercontent.com/39786044/218895248-c27c2d46-f606-4a6d-9b37-78b63bd98444.png">
